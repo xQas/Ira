@@ -1,5 +1,6 @@
 /* ========== OGÓLNE ========== */
 body {
+    padding-top: 15vh;
     font-family: 'Arial', sans-serif;
 }
 
@@ -23,9 +24,13 @@ body {
 
 /* ========== NAVBAR ========== */
 .navbar {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
     color: white !important;
-    background-color: rgba(255, 255, 255, 0.0);
+    background-color: transparent;
     white-space: nowrap;
     flex-direction: row;
     height: 15vh;
