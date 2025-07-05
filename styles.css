@@ -3,6 +3,7 @@ body {
 }
 
 .navbar {
+    color: white !important;
     background-color: rgba(255, 255, 255, 0.0);
     white-space: nowrap;
     flex-direction: row;
@@ -15,6 +16,7 @@ body {
 }
 
 .navbar-brand {
+    color: white !important;
     font-size: 1.5rem; /* Zmniejszono rozmiar czcionki do 1.5rem */
     white-space: nowrap; /* Zapobiega zawijaniu tekstu */
     margin-right: auto; /* Ustawienie odstępu po prawej, aby logo było wyśrodkowane */
@@ -22,7 +24,7 @@ body {
 
 .navbar-collapse {
    /* background-color: rgba(255, 255, 255, 0.8); */
-  padding: 0;
+    padding: 0;
     margin: 0;
 }
 
@@ -35,6 +37,7 @@ body {
 }
 
 .navbar-nav .nav-link {
+    color: white !important;
     text-align: right; /* Opcjonalne: wyrównanie tekstu wewnątrz linków do prawej */
 }
 
@@ -92,13 +95,13 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* 70% czerni */
+    background-color: rgba(0, 0, 0, 0.0); /* 70% czerni */
     z-index: 1;
 }
 
 .carousel-item {
     position: relative;
-    height: 85vh; /* Lub inna wysokość dostosowana do Twoich potrzeb */
+    height: 100vh; /* Lub inna wysokość dostosowana do Twoich potrzeb */
 }
 
 .carousel-item img {
@@ -108,7 +111,7 @@ body {
 }
 
 .bg-carousel {
-  margin-top: 15vh;
+    /*margin-top: 15vh; */
     background-size: cover;
     background-position: center;
     background-color: white;
@@ -210,19 +213,16 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-/* Zwiększenie kontrastu w menu */
-.navbar-nav .nav-link {
-    color: #000; /* Czarny tekst dla lepszej widoczności */
-}
-
 /* Usuwanie nadmiarowych marginesów */
 .offcanvas-body .nav-link {
+    color: white !important;
     margin: 0;
     padding: 20px 0;
 }
 
 /* Stylizacja offcanvas tytułu */
 .offcanvas-title {
+    color: white !important;
     font-weight: bold;
     font-size: 1.5rem;
 }
