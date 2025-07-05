@@ -19,6 +19,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Czy to jeszcze potrzebne? */
 .section-title {
   margin-bottom: 40px;
   font-size: 30px;
@@ -70,8 +71,8 @@ html {
 }
 
 /* Navbar Elements */
-.navbar-brand {
-  font-size: 1.5rem;
+.navbar .navbar-brand {
+  font-size: 4vh;
   margin-right: auto;
   transition: color var(--transition-fast);
 }
@@ -86,6 +87,7 @@ html {
 }
 
 .navbar-nav .nav-link {
+  font-size: 4vh;
   text-align: right;
   transition: color var(--transition-fast);
 }
@@ -98,12 +100,12 @@ html {
 
 .offcanvas-title {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 5vh;
 }
 
 /* ========== LOGO ========== */
 .logo {
-  height: auto;
+  height: 9vh;
   max-height: 9vh;
   object-fit: contain;
 }
@@ -225,6 +227,10 @@ html {
 }
 
 .section {
+    justify-content: center;
+    color: var(--color-dark);
+    padding-bottom: 5vh;
+    padding-top: 15vh;
     height: 100vh;
 } 
 /* ========== MODAL ========== */
@@ -242,7 +248,7 @@ html {
 
 .footerView {
   padding: 6%;
-  height: var(--navbar-height);
+  height: 30vh;
   position: relative;
 }
 
