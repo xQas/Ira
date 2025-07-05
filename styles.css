@@ -92,13 +92,13 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* 70% czerni */
+    background-color: rgba(0, 0, 0, 0.0); /* 70% czerni */
     z-index: 1;
 }
 
 .carousel-item {
     position: relative;
-    height: 85vh; /* Lub inna wysokość dostosowana do Twoich potrzeb */
+    height: 100vh; /* Lub inna wysokość dostosowana do Twoich potrzeb */
 }
 
 .carousel-item img {
@@ -108,7 +108,7 @@ body {
 }
 
 .bg-carousel {
-  margin-top: 15vh;
+    /*margin-top: 15vh; */
     background-size: cover;
     background-position: center;
     background-color: white;
