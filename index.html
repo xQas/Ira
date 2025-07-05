@@ -19,7 +19,7 @@
     </script>
 
 <!-- Nawigacja -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-transparent fixed-top">
     <div class="container-fluid d-flex justify-content-between align-items-center">
         <!-- Napis "Iryna Lozhechnikova" ukryty na małych ekranach -->
         <div class="d-flex align-items-center">
@@ -28,7 +28,7 @@
           
         <!-- Logo, wyśrodkowane w nawigacji -->
         <div class="position-absolute start-50 translate-middle- d-flex justify-content-center align-items-center mx-auto">
-            <img src="/workspaces/Ira/logo/Logo_OG_white.png" alt="Logo" class="img-fluid logo">
+            <img src="./logo/Logo_OG_white.png" alt="Logo" class="img-fluid logo">
         </div>
 
         <!-- Tradycyjne menu nawigacyjne - widoczne na dużych ekranach (d-lg-flex) -->
@@ -201,5 +201,28 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar");
+  const logo = document.querySelector(".logo");
+
+  function updateNavbar() {
+    if (window.scrollY > window.innerHeight * 0.9) {
+      navbar.classList.remove("navbar-transparent");
+      navbar.classList.add("navbar-scrolled");
+      logo.src = "./logo/Logo_OG.png"; // ← czarne logo
+    } else {
+      navbar.classList.add("navbar-transparent");
+      navbar.classList.remove("navbar-scrolled");
+      logo.src = "./logo/Logo_OG_white.png"; // ← białe logo
+    }
+  }
+
+  window.addEventListener("scroll", updateNavbar);
+  updateNavbar(); // od razu po załadowaniu
+});
+</script>
+
     </body>
     </html>
