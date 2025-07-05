@@ -1,0 +1,254 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.0);
+    white-space: nowrap;
+    flex-direction: row;
+    height: 15vh;
+    padding: 0.5rem 1rem; /* Mniejsze padding dla lepszego dopasowania */
+    /*padding-left: 4%;
+    padding-right: 6%;
+    padding-top: 1%;
+    padding-bottom: 1%; */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Zmniejszono rozmiar czcionki do 1.5rem */
+    white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+    margin-right: auto; /* Ustawienie odstępu po prawej, aby logo było wyśrodkowane */
+}
+
+.navbar-collapse {
+   /* background-color: rgba(255, 255, 255, 0.8); */
+  padding: 0;
+    margin: 0;
+}
+
+.navbar-toggler {
+    margin-left: auto; /* Przycisk togglera przesunięty na prawą stronę */
+}
+
+.navbar-nav {
+    margin-left: auto; /* To przesuwa cały ul do prawej strony */
+}
+
+.navbar-nav .nav-link {
+    text-align: right; /* Opcjonalne: wyrównanie tekstu wewnątrz linków do prawej */
+}
+
+.img-view {
+    height: 100%;
+    width: auto;
+}
+
+.b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+.view {
+  padding: 6%;
+    position: relative;
+    /* height: 85vh; */
+    background-color: white;
+   /* border-bottom: 1vh solid black; */
+}
+
+.footerView {
+  padding: 6%;
+    position: relative;
+    height: 15vh;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}  
+
+.carousel-caption {
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 4em;
+    font-family: 'Arial', sans-serif;
+}
+
+.carousel-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 70% czerni */
+    z-index: 1;
+}
+
+.carousel-item {
+    position: relative;
+    height: 85vh; /* Lub inna wysokość dostosowana do Twoich potrzeb */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%; /* Ustawienie na 100% w celu dopasowania do wysokości kontenera */
+    object-fit: cover; /* Dopasowanie obrazu bez zmiany proporcji */
+}
+
+.bg-carousel {
+  margin-top: 15vh;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+}
+
+.bg-courses {
+    background-size: cover;
+    background-position: center;
+}
+
+.black-rectangle {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Style for the logo */
+.logo {
+   /* margin-left: 50px;
+    margin-top: 50px;
+    */
+    max-height: 9vh;
+    background: transparent; /* Ensure the background of the image is transparent */
+}
+
+/*.jumbotron {
+    padding-top: 15%;
+}*/
+
+@media (max-width: 768px) {
+    .logo {
+        height: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        height: 25px;
+    }
+}
+
+.card-img-top {
+    filter: brightness(50%);
+}
+
+.card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.card-title {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+    margin-top: 1rem;
+}
+
+#kursy {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.single-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.single-carousel .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.single-carousel .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.single-carousel .carousel-caption h2 {
+    font-size: 4rem; /* Adjust the font size as needed */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Zwiększenie kontrastu w menu */
+.navbar-nav .nav-link {
+    color: #000; /* Czarny tekst dla lepszej widoczności */
+}
+
+/* Usuwanie nadmiarowych marginesów */
+.offcanvas-body .nav-link {
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Stylizacja offcanvas tytułu */
+.offcanvas-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+        /* Dodanie marginesu przed sekcją portfolio */
+        #portfolio-container {
+            margin-top: 15vh; /* 15% wysokości ekranu */
+        }
+
+        /* Upewnij się, że obraz w kartach jest responsywny i proporcjonalny */
+        .card-img-top {
+            width: 100%;  /* Sprawia, że obraz dostosowuje się do szerokości karty */
+            height: auto; /* Zachowuje proporcje obrazu */
+            object-fit: cover; /* Dopasowanie obrazu do dostępnej przestrzeni bez zmiany proporcji */
+            max-height: 300px; /* Ogranicza maksymalną wysokość, aby karty były spójne */
+            object-position: center; 
+        }
+
+        /* Efekt powiększenia po najechaniu na obraz */
+        .card-img-top:hover {
+            transform: scale(1.05); /* Powiększa obraz nieco po najechaniu */
+            transition: transform 0.3s ease;
+        }
+
+        /* Upewnij się, że obraz w modal jest responsywny */
+        .modal-img {
+            max-width: 100%;
+            height: auto;
+        }

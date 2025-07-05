@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iryna Lozhechnikova - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Nawigacja -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Napis "Iryna Lozhechnikova" ukryty na małych ekranach -->
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-none d-lg-block" href="index.html">Iryna Lozhechnikova</a>
+            </div>
+              
+            <!-- Logo, wyśrodkowane w nawigacji -->
+            <div class="d-flex justify-content-center align-items-center mx-auto">
+                <img src="Logo_OG.png" alt="Logo" class="img-fluid logo">
+            </div>
+
+            <!-- Tradycyjne menu nawigacyjne - widoczne na dużych ekranach (d-lg-flex) -->
+            <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">O mnie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Oferta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <!-- Przycisk offcanvas widoczny tylko na małych ekranach (d-lg-none) -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu offcanvas - widoczne tylko na małych ekranach -->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="height: 100vh;">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasTopLabel">Iryna Lozhechnikova</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body justify-content-center">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">O mnie</a></li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Oferta</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Karuzela -->
+<header class="container-fluid p-0 bg-carousel" id="header">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./pictures/karuzelaGOLD.JPG" alt="First slide">
+                <div class="overlay"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="./pictures/karuzelaCHILD.JPG" alt="Second slide">
+                <div class="overlay"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="./pictures/karuzelaWOMAN.JPG" alt="Third slide">
+                <div class="overlay"></div>
+            </div>
+        </div>
+
+<!-- Kontrolki karuzeli dla Bootstrap 5 -->
+<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+</a>
+
+    </div>
+</header>
+
+                <!-- Sekcja Portfolio -->
+    <div id="portfolio-container" class="container mt-5">
+        <h2 class="text-center mb-5">Portfolio</h2>
+
+        <!-- Na sprzedaż -->
+        <div class="portfolio-section">
+            <h3 class="text-center mb-4">Na sprzedaż</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <!-- Kliknięcie otworzy modal z większą wersją obrazu -->
+                        <img src="./pictures/gold.JPG" class="card-img-top img-fluid" alt="Na sprzedaż 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold.JPG', 'Obraz 1 - 1500 PLN')">
+                        <div class="card-body">
+                            <h5 class="card-title">Golden earring</h5>
+                            <p class="card-text">Wymiary: 50x70 cm</p>
+                            <p class="card-text">Cena: 15 000 PLN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./pictures/hat.JPG" class="card-img-top img-fluid" alt="Na sprzedaż 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/hat.JPG', 'Obraz 2 - 2000 PLN')">
+                        <div class="card-body">
+                            <h5 class="card-title">Nice summer hat</h5>
+                            <p class="card-text">Wymiary: 60x90 cm</p>
+                            <p class="card-text">Cena: 20,99 PLN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./pictures/child.JPG" class="card-img-top img-fluid" alt="Na sprzedaż 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/child.JPG', 'Obraz 3 - 1200 PLN')">
+                        <div class="card-body">
+                            <h5 class="card-title">Child</h5>
+                            <p class="card-text">Wymiary: 40x60 cm</p>
+                            <p class="card-text">Cena: za darmo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   <!-- Dry-brush -->
+<div class="portfolio-section mt-5">
+    <h3 class="text-center mb-4">Dry-brush</h3>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="glasses.JPG" class="card-img-top img-fluid" alt="Dry-brush 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('glasses.JPG', 'Boy in glasses')">
+                <div class="card-body">
+                    <h5 class="card-title">Chłopiec w okularach</h5>
+                    <p class="card-text">suchy pędzel na papierze</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="boy.JPG" class="card-img-top img-fluid" alt="Dry-brush 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('boy.JPG', 'Young Boy')">
+                <div class="card-body">
+                    <h5 class="card-title">Young Boy</h5>
+                    <p class="card-text">Dry-brush on paper</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="woman.JPG" class="card-img-top img-fluid" alt="Dry-brush 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('woman.JPG', 'Woman')">
+                <div class="card-body">
+                    <h5 class="card-title">Kobieta / Woman</h5>
+                    <p class="card-text">suchy pędzel / dry brush</p>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Wet-brush -->
+<div class="portfolio-section mt-5">
+    <h3 class="text-center mb-4">Wet-brush</h3>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://picsum.photos/id/206/400" class="card-img-top img-fluid" alt="Wet-brush 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('https://picsum.photos/id/206/800/1200', 'Wet-brush 1')">
+                <div class="card-body">
+                    <h5 class="card-title">Wet-brush 1</h5>
+                    <p class="card-text">Wymiary: 60x90 cm</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://picsum.photos/id/201/400" class="card-img-top img-fluid" alt="Wet-brush 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('https://picsum.photos/id/207/800/1200', 'Wet-brush 2')">
+                <div class="card-body">
+                    <h5 class="card-title">Wet-brush 2</h5>
+                    <p class="card-text">Wymiary: 60x90 cm</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://picsum.photos/id/208/400" class="card-img-top img-fluid" alt="Wet-brush 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('https://picsum.photos/id/208/800/1200', 'Wet-brush 3')">
+                <div class="card-body">
+                    <h5 class="card-title">Wet-brush 3</h5>
+                    <p class="card-text">Wymiary: 60x90 cm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Obrazy -->
+<div class="portfolio-section mt-5">
+    <h3 class="text-center mb-4">Obrazy</h3>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="./pictures/gold.JPG" class="card-img-top img-fluid" alt="Obraz 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold.JPG', 'Obraz 1')">
+                <div class="card-body">
+                    <h5 class="card-title">Złoty kolczyk</h5>
+                    <p class="card-text">Wymiary: 60x90 cm</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="./pictures/gold2.JPG" class="card-img-top img-fluid" alt="Obraz 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold2.JPG', 'Obraz 2')">
+                <div class="card-body">
+                    <h5 class="card-title">Złoty kolczyk / Golden earring</h5>
+                    <p class="card-text">Wymiary: 60x90 cm</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="./pictures/gold3.JPG" class="card-img-top img-fluid" alt="Obraz 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold3.JPG', 'Obraz 3')">
+                <div class="card-body">
+                    <h5 class="card-title">Golden earring</h5>
+                    <p class="card-text">Wymiary: 60x90 cm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- Modal Bootstrap do wyświetlania obrazów -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Tytuł obrazu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" class="img-fluid" alt="Pełny obraz">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Stopka -->
+    <footer class="footerView text-center bg-dark text-white py-4 mt-5">
+        <p>&copy; 2024 Iryna Lozhechnikova. Wszelkie prawa zastrzeżone.</p>
+        <div>
+            <a href="#" class="text-white mx-2">Facebook</a>
+            <a href="#" class="text-white mx-2">LinkedIn</a>
+            <a href="#" class="text-white mx-2">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+     <!-- Lightbox2 CSS -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+     
+        <!-- Skrypty -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Funkcja do ustawiania obrazu i tytułu w modal
+            function openModal(imageUrl, title) {
+                document.getElementById('modalImage').src = imageUrl;
+                document.getElementById('imageModalLabel').innerText = title;
+            }
+        </script>
+</body>
+</html>
