@@ -224,6 +224,9 @@ html {
   margin-bottom: 0.5rem;
 }
 
+.section {
+    height: 100vh;
+} 
 /* ========== MODAL ========== */
 .modal-img {
   max-width: 100%;

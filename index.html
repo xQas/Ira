@@ -28,7 +28,7 @@
           
         <!-- Logo, wyśrodkowane w nawigacji -->
         <div class="position-absolute start-50 translate-middle- d-flex justify-content-center align-items-center mx-auto">
-            <img src="./logo/Logo_OG_white.png" alt="Logo" class="img-fluid logo">
+            <img src="/workspaces/Ira/logo/Logo_OG_white.png" alt="Logo" class="img-fluid logo">
         </div>
 
         <!-- Tradycyjne menu nawigacyjne - widoczne na dużych ekranach (d-lg-flex) -->
@@ -95,7 +95,7 @@
 
 
 <!-- Sekcja O mnie -->
-<div class="text-black row justify-content-center">
+<div class="section text-black row justify-content-center">
     <div class="col-md-auto mt-5 m-3 m-md-5 d-flex align-items-start justify-content-center justify-content-md-start">
         <img src="https://picsum.photos/id/65/400" class="img-fluid rounded img-view" alt="Jan Kowalski" loading="lazy">
     </div>
@@ -139,7 +139,7 @@
             <div class="row px-5">
                 <div class="col-md-4 portfolio-item">
                     <div class="card">
-                        <img src="./pictures/hat.JPG" class="card-img-top" alt="Project 1">
+                        <img src="/workspaces/Ira/pictures/hat.JPG" class="card-img-top" alt="Project 1">
                         <div class="overlay"></div>
                         <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
                             <h5 class="card-title text-white">Portret dry-brush</h5>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="col-md-4 portfolio-item">
                     <div class="card">
-                        <img src="./pictures/gold.JPG" class="card-img-top" alt="Project 1">
+                        <img src="/workspaces/Ira/pictures/gold.JPG" class="card-img-top" alt="Project 1">
                         <div class="overlay"></div>
                         <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
                             <h5 class="card-title text-white">Portret wet-brush</h5>
@@ -163,7 +163,7 @@
                 </div>
                 <div class="col-md-4 portfolio-item">
                     <div class="card">
-                        <img src="./pictures/child.JPG" class="card-img-top" alt="Project 1">
+                        <img src="/workspaces/Ira/pictures/child.JPG" class="card-img-top" alt="Project 1">
                         <div class="overlay"></div>
                         <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
                             <h5 class="card-title text-white">Obraz ze zdjęcia</h5>
@@ -211,11 +211,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.scrollY > window.innerHeight * 0.9) {
       navbar.classList.remove("navbar-transparent");
       navbar.classList.add("navbar-scrolled");
-      logo.src = "./logo/Logo_OG.png"; // ← czarne logo
+      logo.src = "/workspaces/Ira/logo/Logo_OG.png"; // ← czarne logo
     } else {
       navbar.classList.add("navbar-transparent");
       navbar.classList.remove("navbar-scrolled");
-      logo.src = "./logo/Logo_OG_white.png"; // ← białe logo
+      logo.src = "/workspaces/Ira/logo/Logo_OG_white.png"; // ← białe logo
     }
   }
 
@@ -223,6 +223,31 @@ document.addEventListener("DOMContentLoaded", function () {
   updateNavbar(); // od razu po załadowaniu
 });
 </script>
+<script>
+    let currentSection = 0; // numer aktualnej sekcji (0 = na górze)
 
+window.addEventListener('wheel', (e) => {
+  e.preventDefault(); // blokujemy domyślne scrollowanie
+
+  if (e.deltaY > 0) {
+    // scroll w dół
+    currentSection++;
+  } else {
+    // scroll w górę
+    currentSection = Math.max(0, currentSection - 1);
+  }
+
+  // maksymalna liczba sekcji - dostosuj do ilości sekcji/ wysokości strony
+  const maxSections = Math.floor(document.body.scrollHeight / window.innerHeight) - 1;
+  currentSection = Math.min(currentSection, maxSections);
+
+  // scroll do sekcji
+  window.scrollTo({
+    top: currentSection * window.innerHeight,
+    behavior: 'smooth',
+  });
+}, { passive: false });
+
+</script>
     </body>
     </html>
