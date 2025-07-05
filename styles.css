@@ -15,6 +15,7 @@ body {
 }
 
 .navbar-brand {
+    color: white;
     font-size: 1.5rem; /* Zmniejszono rozmiar czcionki do 1.5rem */
     white-space: nowrap; /* Zapobiega zawijaniu tekstu */
     margin-right: auto; /* Ustawienie odstępu po prawej, aby logo było wyśrodkowane */
@@ -22,7 +23,7 @@ body {
 
 .navbar-collapse {
    /* background-color: rgba(255, 255, 255, 0.8); */
-  padding: 0;
+    padding: 0;
     margin: 0;
 }
 
@@ -35,6 +36,7 @@ body {
 }
 
 .navbar-nav .nav-link {
+    color: white;
     text-align: right; /* Opcjonalne: wyrównanie tekstu wewnątrz linków do prawej */
 }
 
