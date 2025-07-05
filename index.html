@@ -19,33 +19,32 @@
     </script>
 
 <!-- Nawigacja -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-        <!-- Napis "Iryna Lozhechnikova" ukryty na małych ekranach -->
-        <div class="d-flex align-items-center">
-            <a class="navbar-brand d-none d-lg-block" href="index.html">Iryna Lozhechnikova</a>
-        </div>
-          
-        <!-- Logo, wyśrodkowane w nawigacji -->
-        <div class="d-flex justify-content-center align-items-center mx-auto">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top position-relative">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <!-- Nazwa (lewa strona) -->
+        <a class="navbar-brand d-none d-lg-block" href="index.html">Iryna Lozhechnikova</a>
+
+        <!-- Logo wyśrodkowane absolutnie -->
+        <div class="position-absolute start-50 translate-middle-x">
             <img src="./logo/Logo_OG_white.png" alt="Logo" class="img-fluid logo">
         </div>
 
-        <!-- Tradycyjne menu nawigacyjne - widoczne na dużych ekranach (d-lg-flex) -->
-        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+        <!-- Przycisk offcanvas (prawa strona) -->
+        <button class="navbar-toggler d-lg-none ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu (prawa strona) -->
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-end">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#about">O mnie</a></li>
                 <li class="nav-item"><a class="nav-link" href="portfolio.html">Oferta</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
             </ul>
         </div>
-
-        <!-- Przycisk offcanvas widoczny tylko na małych ekranach (d-lg-none) -->
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-            <span class="navbar-toggler-icon"></span>
-        </button>
     </div>
 </nav>
+
 
 <!-- Menu offcanvas - widoczne tylko na małych ekranach -->
 <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="height: 100vh;">
