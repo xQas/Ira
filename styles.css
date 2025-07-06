@@ -34,6 +34,14 @@ html {
   width: auto;
 }
 
+html, body {
+  scroll-snap-type: y mandatory;
+}
+section, .section {
+  scroll-snap-align: start;
+}
+
+
 /* ========== NAVBAR ========== */
 .navbar {
   position: fixed;
