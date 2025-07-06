@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iryna Lozhechnikova</title>
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
 </head>
 
 <body>
@@ -12,6 +13,7 @@
         var w = window.innerWidth;
         var h = window.innerHeight;
     </script>
+
 
 <!-- Nawigacja -->
 <nav class="navbar navbar-expand-lg navbar-transparent fixed-top">
@@ -37,11 +39,15 @@
         </div>
 
         <!-- Przycisk offcanvas widoczny tylko na małych ekranach (d-lg-none) -->
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <button id="hamburger" class="hamburger hamburger-white hamburger--spin d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
     </div>
 </nav>
+
 
 <!-- Menu offcanvas - widoczne tylko na małych ekranach -->
 <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="height: 100vh;">
@@ -57,6 +63,7 @@
         </ul>
     </div>
 </div>
+
 
 <!-- Karuzela -->
 <header id="header" class="section container-fluid text-center p-0 bg-carousel text-white align-content-end col">
@@ -91,12 +98,14 @@
     </div>
 </header>
 
+
 <!-- Sekcja O mnie -->
-<div class="section d-flex row">
+<div class="section d-flex row"> 
+    <!-- ZDJĘCIE -->
     <div class="col-md-auto d-flex align-items-start justify-content-center justify-content-md-start">
         <img src="https://picsum.photos/id/65/350" class="img-fluid rounded img-view" alt="Jan Kowalski" loading="lazy">
     </div>
-                
+    <!-- TEKST -->            
     <div class="col-lg-5 d-flex flex-column justify-content-between">
         <div>
             <h2 class="pb-1">"Najpiękniejsze obrazy to te które mają dla Nas głębokie znaczenie"</h2>
@@ -106,13 +115,14 @@
                 <br>Masz pomysł na obraz? A może chciałbyś podarować wyjątkowej osobie portret? Nie wahaj się, napisz do mnie i chodźmy na kawę.
             </p>
         </div>
-        
+        <!-- PRZYCISK "WIĘCEJ" -->
         <div class="d-flex align-items-end justify-content-center justify-content-md-end">
             <button type="button" class="btn btn-dark">Więcej</button>  
         </div>
     </div>
 </div>
   
+
 <!-- Sekcja Nie masz pomysłu na prezent -->
 <div class="section d-flex flex-row-reverse row">
     <div class="col-md-auto d-flex align-items-start justify-content-center">
@@ -207,15 +217,20 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
   const logo = document.querySelector(".logo");
+  const hamburger = document.querySelector(".hamburger");
 
   function updateNavbar() {
     if (window.scrollY > window.innerHeight * 0.9 && window.scrollY < window.innerHeight * 3.9) {
       navbar.classList.remove("navbar-transparent");
       navbar.classList.add("navbar-scrolled");
+      hamburger.classList.remove("hamburger-white");
+      hamburger.classList.add("hamburger-black");
       logo.src = "./logo/Logo_OG.png"; // ← czarne logo
     } else {
       navbar.classList.add("navbar-transparent");
       navbar.classList.remove("navbar-scrolled");
+      hamburger.classList.add("hamburger-white");
+      hamburger.classList.remove("hamburger-black");
       logo.src = "./logo/Logo_OG_white.png"; // ← białe logo
     }
   }
@@ -224,5 +239,6 @@ document.addEventListener("DOMContentLoaded", function () {
   updateNavbar(); // od razu po załadowaniu
 });
 </script>
+
 </body>
 </html>
