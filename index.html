@@ -27,11 +27,7 @@
         </div>
           
         <!-- Logo, wyśrodkowane w nawigacji -->
-<<<<<<< HEAD
-        <div class="position-absolute start-50 translate-middle- d-flex justify-content-center align-items-center mx-auto">
-=======
         <div class="position-absolute top-50 start-50 translate-middle d-flex justify-content-center align-items-center mx-auto">
->>>>>>> 81fb7e4 (Sectioned.)
             <img src="./logo/Logo_OG_white.png" alt="Logo" class="img-fluid logo">
         </div>
 
@@ -39,6 +35,7 @@
         <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#about">O mnie</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
                 <li class="nav-item"><a class="nav-link" href="portfolio.html">Oferta</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
             </ul>
@@ -67,7 +64,7 @@
 </div>
 
 <!-- Karuzela -->
-<header class="container-fluid text-center p-0 bg-carousel text-white align-content-end col" id="header">
+<header id="Karuzela" class="container-fluid text-center p-0 bg-carousel text-white align-content-end col" id="header">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
 
@@ -222,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const logo = document.querySelector(".logo");
 
   function updateNavbar() {
-    if (window.scrollY > window.innerHeight * 0.9) {
+    if (window.scrollY > window.innerHeight * 0.9 && window.scrollY < window.innerHeight * 3.9) {
       navbar.classList.remove("navbar-transparent");
       navbar.classList.add("navbar-scrolled");
       logo.src = "./logo/Logo_OG.png"; // ← czarne logo
