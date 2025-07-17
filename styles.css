@@ -40,7 +40,9 @@ html, body {
 section, .section {
   scroll-snap-align: start;
 }
-
+section, .section-offer {
+  scroll-snap-align: start;
+}
 
 /* ========== NAVBAR ========== */
 .navbar {
@@ -264,7 +266,16 @@ section, .section {
     padding-bottom: 5vh;
     padding-top: 20vh;
     height: 100vh;
-} 
+}
+
+.section-offer {
+    justify-content: center;
+    color: var(--color-dark);
+    padding-bottom: 5vh;
+    padding-top: 20vh;
+    height: 100vh;
+}
+
 /* ========== MODAL ========== */
 .modal-img {
   max-width: 100%;
@@ -301,3 +312,105 @@ section, .section {
 .black-rectangle {
   color: rgba(0, 0, 0, 0.5);
 }
+
+/* ========== RESPONSYWNOŚĆ: MOBILE (max-width: 576px) ========== */
+@media (max-width: 576px) {
+
+  /* SEKCJA O MNIE */
+  .section {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    height: 100vh;
+  }
+
+  .section .col-md-auto {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+  }
+
+  .section img.img-view {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .section .col-lg-5 {
+    padding: 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.25rem;
+  }
+
+  /* SEKCJA OFERTA */
+  .section-offer {
+    height: auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .section-offer.text-center h2 {
+    display: none;
+  }
+
+  .section-offer.text-center .row {
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .portfolio-item {
+    width: 100% !important;
+    height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .portfolio-item .card {
+    height: 100%;
+    width: 100%;
+    border: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portfolio-item .card-img-top {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .portfolio-item .card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    z-index: 2;
+    background: transparent;
+  }
+
+  .portfolio-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .portfolio-item .card-title,
+  .portfolio-item .btn {
+    z-index: 3;
+  }
+}
+
