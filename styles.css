@@ -319,6 +319,18 @@ section, .section-offer {
   color: rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+}
+
+
 /* ========== RESPONSYWNOŚĆ: MOBILE (max-width: 576px) ========== */
 @media (max-width: 576px) {
 
@@ -374,13 +386,13 @@ section, .section-offer {
 
   .portfolio-item {
     width: 100% !important;
-    height: 50vh;
+    height: 75vh;
     margin: 0 !important;
     padding: 0 !important;
   }
 
   .portfolio-item .card {
-    height: 55vh;
+    height: 75vh;
     width: 100%;
     border: none;
     position: relative;
@@ -388,8 +400,9 @@ section, .section-offer {
   }
 
   .portfolio-item .card-img-top {
-    height:50vh;
+    height:75vh;
     width: 100%;
+    max-height: None;
     object-fit: cover;
     object-position: center;
   }
@@ -398,7 +411,7 @@ section, .section-offer {
     position: absolute;
     top: 0;
     left: 0;
-    height: 50vh;
+    height: 75vh;
     width: 100%;
     display: none;
     flex-direction: column;
@@ -412,7 +425,7 @@ section, .section-offer {
     position: absolute;
     top: 0;
     left: 0;
-    height: 50vh;
+    height: 75vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
