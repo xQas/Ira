@@ -9,6 +9,11 @@
 }
 
 /* ========== OGÓLNE ========== */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+} 
+
 body {
   font-family: var(--font-main);
   margin: 0;
@@ -153,6 +158,11 @@ section, .section-offer {
 @media (max-width: 576px) {
   .logo {
     max-height: 25px;
+  }
+
+  .portfolio-item .card,
+  .portfolio-item .card-img-top {
+    border-radius: 0 !important;
   }
 }
 
@@ -351,7 +361,7 @@ section, .section-offer {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 0;
+    border-radius: 0 !important;
   }
 
   .section .col-lg-5 {

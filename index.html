@@ -25,7 +25,7 @@
           
         <!-- Logo, wyśrodkowane w nawigacji -->
         <div class="position-absolute top-50 start-50 translate-middle d-flex justify-content-center align-items-center mx-auto">
-            <img src="./logo/Logo_OG_white.png" alt="Logo" class="img-fluid logo">
+            <img src="/workspaces/Ira/logo/Logo_OG_white.png" alt="Logo" class="img-fluid logo">
         </div>
 
         <!-- Tradycyjne menu nawigacyjne - widoczne na dużych ekranach (d-lg-flex) -->
@@ -67,7 +67,7 @@
 
 <!-- Karuzela -->
 <header id="header" class="section container-fluid text-center p-0 bg-carousel text-white align-content-end col">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <section id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bg="dark">
         <div class="carousel-inner">
 
             <div class="carousel-item active">
@@ -87,20 +87,20 @@
         </div>
 
         <!-- Kontrolki karuzeli -->
-        <button class="align-items-end mb-3 carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <button class="align-items-end mb-5 carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="align-items-end mb-3 carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <button class="align-items-end mb-5 carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
+    </section>
 </header>
 
 
 <!-- Sekcja O mnie -->
-<div class="section d-flex row"> 
+<section class="section d-flex row" data-bg="light"> 
     <!-- ZDJĘCIE -->
     <div class="col-md-6 d-flex align-items-start justify-content-center justify-content-md-start">
         <img src="https://picsum.photos/id/65/1200/900" class="img-view img-fluid rounded" alt="Jan Kowalski" loading="lazy">
@@ -120,11 +120,11 @@
             <button type="button" class="btn btn-dark">Więcej</button>  
         </div>
     </div>
-</div>
+</section>
   
 
 <!-- Sekcja Nie masz pomysłu na prezent -->
-<div class="section d-flex flex-row-reverse row">
+<section class="section d-flex flex-row-reverse row" data-bg="light">
     <div class="col-md-6 d-flex align-items-start justify-content-center">
         <img src="https://picsum.photos/id/74/1200/900" class="img-fluid rounded img-view" alt="Jan Kowalski" loading="lazy">
     </div>
@@ -139,16 +139,16 @@
             <button type="button" class="btn btn-dark">Więcej</button>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Sekcja Oferta -->
-<div class="section-offer text-center">
+<section class="section-offer text-center" data-bg="light">
     <h2>Oferta</h2>
     <div class="row">
     
         <div class="col-md-4 portfolio-item">
             <div class="card">
-                <img src="./pictures/hat.JPG" class="card-img-top" alt="Project 1">
+                <img src="/workspaces/Ira/pictures/hat.JPG" class="card-img-top" alt="Project 1">
                 <div class="overlay"></div>
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                     <h5 class="card-title text-white text-center mt-auto mb-auto">Portret wet-brush</h5>
@@ -161,7 +161,7 @@
             
         <div class="col-md-4 portfolio-item">
             <div class="card">
-                <img src="./pictures/gold.JPG" class="card-img-top" alt="Project 1">
+                <img src="/workspaces/Ira/pictures/gold.JPG" class="card-img-top" alt="Project 1">
                 <div class="overlay"></div>
 
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
@@ -176,7 +176,7 @@
 
         <div class="col-md-4 portfolio-item">
             <div class="card">
-                <img src="./pictures/child.JPG" class="card-img-top" alt="Project 1">
+                <img src="/workspaces/Ira/pictures/child.JPG" class="card-img-top" alt="Project 1">
                 <div class="overlay"></div>
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                     <h5 class="card-title text-white text-center mt-auto mb-auto">Obraz ze zdjęcia</h5>
@@ -188,10 +188,10 @@
         </div>
    
     </div>
-</div>
+</section>
     
 <!-- Sekcja Kursy -->
-  <section id="kursy" class="single-carousel">
+  <section id="kursy" class="single-carousel" data-bg="dark">
     <img src="https://picsum.photos/id/1003/1600/600" class="img-fluid" alt="Kursy">
       <div class="overlay"></div>
       <div class="carousel-caption justify-content-between">
@@ -213,32 +213,78 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
   const logo = document.querySelector(".logo");
   const hamburger = document.querySelector(".hamburger");
 
-  function updateNavbar() {
-    if (window.scrollY > window.innerHeight * 0.9 && window.scrollY < window.innerHeight * 3.9) {
-      navbar.classList.remove("navbar-transparent");
-      navbar.classList.add("navbar-scrolled");
-      hamburger.classList.remove("hamburger-white");
-      hamburger.classList.add("hamburger-black");
-      logo.src = "./logo/Logo_OG.png"; // ← czarne logo
-    } else {
-      navbar.classList.add("navbar-transparent");
-      navbar.classList.remove("navbar-scrolled");
-      hamburger.classList.add("hamburger-white");
-      hamburger.classList.remove("hamburger-black");
-      logo.src = "./logo/Logo_OG_white.png"; // ← białe logo
+  const sections = document.querySelectorAll("section");
+
+  function updateNavbarOnResize() {
+    let currentSection = null;
+
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        currentSection = section;
+      }
+    });
+
+    if (currentSection) {
+      const bg = currentSection.dataset.bg;
+
+      if (bg === "light" && window.innerWidth > 768) {
+        navbar.classList.remove("navbar-transparent");
+        navbar.classList.add("navbar-scrolled");
+        hamburger.classList.remove("hamburger-white");
+        hamburger.classList.add("hamburger-black");
+        logo.src = "/workspaces/Ira/logo/Logo_OG.png"; // czarne
+      } else {
+        navbar.classList.add("navbar-transparent");
+        navbar.classList.remove("navbar-scrolled");
+        hamburger.classList.add("hamburger-white");
+        hamburger.classList.remove("hamburger-black");
+        logo.src = "/workspaces/Ira/logo/Logo_OG_white.png"; // białe
+      }
     }
   }
 
-  window.addEventListener("scroll", updateNavbar);
-  updateNavbar(); // od razu po załadowaniu
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const bg = entry.target.dataset.bg;
+
+          if (bg === "light" && window.innerWidth > 768) {
+            navbar.classList.remove("navbar-transparent");
+            navbar.classList.add("navbar-scrolled");
+            hamburger.classList.remove("hamburger-white");
+            hamburger.classList.add("hamburger-black");
+            logo.src = "/workspaces/Ira/logo/Logo_OG.png"; // czarne
+          } else {
+            navbar.classList.add("navbar-transparent");
+            navbar.classList.remove("navbar-scrolled");
+            hamburger.classList.add("hamburger-white");
+            hamburger.classList.remove("hamburger-black");
+            logo.src = "/workspaces/Ira/logo/Logo_OG_white.png"; // białe
+          }
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  // Obsługa resize
+  window.addEventListener("resize", function () {
+    updateNavbarOnResize();
+  });
 });
 </script>
+
+
 
 </body>
 </html>
