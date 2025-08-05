@@ -10,21 +10,24 @@
 
 /* ========== OGÓLNE ========== */
 
-html, body {
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  overflow-y: auto;
-}
-
-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always; 
-}
-
 body {
   font-family: var(--font-main);
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh; /* każda sekcja pełny ekran */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 html {
@@ -83,16 +86,6 @@ html {
 .img-view {
   height: 100%;
   width: auto;
-}
-
-html, body {
-  scroll-snap-type: y mandatory;
-}
-section, .section {
-  scroll-snap-align: start;
-}
-section, .section-offer {
-  scroll-snap-align: start;
 }
 
 /* ========== NAVBAR ========== */
@@ -365,6 +358,8 @@ section, .section-offer {
     padding-bottom: 5vh;
     padding-top: 20vh;
     height: 100vh;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 /* ========== MODAL ========== */
@@ -481,6 +476,8 @@ section, .section-offer {
     height: auto !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .section-offer.text-center h2 {
