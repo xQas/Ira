@@ -133,7 +133,7 @@ section, .section-offer {
 
 /* Navbar Elements */
 .navbar .navbar-brand {
-  font-size: 4vh;
+  font-size: 30px;
   margin-right: auto;
   transition: color var(--transition-fast);
 }
@@ -155,10 +155,18 @@ section, .section-offer {
   margin-left: auto;
 }
 
-.navbar-nav .nav-link {
-  font-size: 4vh;
+.navbar-nav .nav-link {  
+  font-size: 30px;
   text-align: right;
   transition: color var(--transition-fast);
+}
+
+@media (max-width: 1200px) {
+    .navbar-nav .nav-link {  
+    font-size: 25px;
+    text-align: right;
+    transition: color var(--transition-fast);
+    }
 }
 
 .hamburger-white .hamburger-inner,
@@ -177,6 +185,8 @@ section, .section-offer {
   box-shadow: none;
 }
 
+.offcanvas
+
 /* Offcanvas Menu */
 .offcanvas-body .nav-link,
 .offcanvas-title {
@@ -185,25 +195,29 @@ section, .section-offer {
 
 .offcanvas-title {
   font-weight: bold;
-  font-size: 5vh;
+  font-size: 25px; /*6vw*/
+}
+
+.offcanvas-body .nav-link {
+  font-size: 20px; /*5vw*/
 }
 
 /* ========== LOGO ========== */
 .logo {
-  height: 9vh;
-  max-height: 9vh;
+  /* height: 9vh; */
+  max-height: 50px;
   object-fit: contain;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .logo {
-    max-height: 30px;
+    max-height: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .logo {
-    max-height: 25px;
+    max-height: 30px;
   }
 
   .portfolio-item .card,
@@ -281,13 +295,20 @@ section, .section-offer {
 .single-carousel .carousel-caption {
   z-index: 2;
   color: var(--color-light);
+  padding-left: 70vw;
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  display: flex;               /* dodane */
+  justify-content: center;     /* dodane */
+  align-items: center;         /* dodane */
+  position: absolute;          /* żeby się centrowało względem sekcji */
+  width: 100%;
+  height: 100%;
 }
 
 .single-carousel .carousel-caption h2 {
-  font-size: 4rem;
+  text-align: center; 
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 7vw;
   font-family: var(--font-main);
 }
 
@@ -327,7 +348,15 @@ section, .section-offer {
     color: var(--color-dark);
     padding-bottom: 5vh;
     padding-top: 20vh;
-    height: 100vh;
+    height: 100%;
+}
+
+.section h2 {
+    font-size: 2.5vw;
+}
+
+.section p {
+    font-size: 1.5vw;
 }
 
 .section-offer {
@@ -397,6 +426,30 @@ section, .section-offer {
     height: 100vh;
   }
 
+  .section h2 {
+    font-size: 5vw !important;
+}
+
+  .section p {
+    font-size: 3vw !important;
+}
+
+    /* SEKCJA O MNIE */
+  .section .img-col {
+    display: flex;
+    object-fit: cover;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    height: 50vh;
+  }
+
+    .section .text-col {
+    display: flex;
+    object-fit: cover;
+    padding: 5%;
+    height: 50vh;
+  }
+
   .section .col-md-auto {
     padding: 0 !important;
     margin: 0 !important;
@@ -405,7 +458,8 @@ section, .section-offer {
 
   .section img.img-view {
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: flex;
     object-fit: cover;
     border-radius: 0 !important;
   }
@@ -415,11 +469,11 @@ section, .section-offer {
   }
 
   .section h2 {
-    font-size: 1.0rem;
+    font-size: 2.5vh;
   }
 
   .section p {
-    font-size: 0.5rem;
+    font-size: 1.5vh;
   }
 
   /* SEKCJA OFERTA */

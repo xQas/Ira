@@ -25,7 +25,7 @@
           
         <div class="logo-container d-flex align-items-center">
             <a href="index.html">
-                <img src="/workspaces/Ira/logo/Logo_OG_white.png" alt="Logo" class="img-fluid logo">
+                <img src="./logo/Logo_OG_white.png" alt="Logo" class="img-fluid logo">
             </a>
         </div>
 
@@ -51,7 +51,7 @@
 
 
 <!-- Menu offcanvas - widoczne tylko na małych ekranach -->
-<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="height: 100vh;">
+<div class="offcanvas offcanvas-top custom-offcanvas" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="height: 100vh;">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasTopLabel">Iryna Lozhechnikova</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -103,11 +103,11 @@
 <!-- Sekcja O mnie -->
 <section class="section d-flex row" data-bg="light"> 
     <!-- ZDJĘCIE -->
-    <div class="col-md-6 d-flex align-items-start justify-content-center justify-content-md-start">
+    <div class="img-col col-md-6 d-flex align-items-start justify-content-center justify-content-md-start">
         <img src="https://picsum.photos/id/65/1200/900" class="img-view img-fluid rounded" alt="Jan Kowalski" loading="lazy">
     </div>
     <!-- TEKST -->            
-    <div class="col-md-5 d-flex flex-column justify-content-between">
+    <div class="text-col col-md-5 d-flex flex-column justify-content-between">
         <div class="mx-3">
             <h2 class="pb-1">"Najpiękniejsze obrazy to te które mają dla Nas głębokie znaczenie"</h2>
             <p>
@@ -126,11 +126,11 @@
 
 <!-- Sekcja Nie masz pomysłu na prezent -->
 <section class="section d-flex flex-row-reverse row" data-bg="light">
-    <div class="col-md-6 d-flex align-items-start justify-content-center">
+    <div class="img-col col-md-6 d-flex align-items-start justify-content-center">
         <img src="https://picsum.photos/id/74/1200/900" class="img-fluid rounded img-view" alt="Jan Kowalski" loading="lazy">
     </div>
 
-    <div class="col-md-5 d-flex flex-column justify-content-between">
+    <div class="text-col col-md-5 d-flex flex-column justify-content-between">
         <div class="mx-3">
             <h2 class="pb-1">Szukasz pomysłu na prezent?</h2>
             <p>Obraz może być doskonałym prezentem na każdą okazję, ale czy na każdą kieszeń? :D</p>
@@ -149,7 +149,7 @@
     
         <div class="col-md-4 portfolio-item">
             <div class="card">
-                <img src="/workspaces/Ira/pictures/hat.JPG" class="card-img-top" alt="Project 1">
+                <img src="./pictures/hat.JPG" class="card-img-top" alt="Project 1">
                 <div class="overlay"></div>
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                     <h5 class="card-title text-white text-center mt-auto mb-auto">Portret wet-brush</h5>
@@ -162,7 +162,7 @@
             
         <div class="col-md-4 portfolio-item">
             <div class="card">
-                <img src="/workspaces/Ira/pictures/gold.JPG" class="card-img-top" alt="Project 1">
+                <img src="./pictures/gold.JPG" class="card-img-top" alt="Project 1">
                 <div class="overlay"></div>
 
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
@@ -177,7 +177,7 @@
 
         <div class="col-md-4 portfolio-item">
             <div class="card">
-                <img src="/workspaces/Ira/pictures/child.JPG" class="card-img-top" alt="Project 1">
+                <img src="./pictures/child.JPG" class="card-img-top" alt="Project 1">
                 <div class="overlay"></div>
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                     <h5 class="card-title text-white text-center mt-auto mb-auto">Obraz ze zdjęcia</h5>
@@ -192,13 +192,14 @@
 </section>
     
 <!-- Sekcja Kursy -->
-  <section id="kursy" class="single-carousel" data-bg="dark">
-    <img src="https://picsum.photos/id/1003/1600/600" class="img-fluid" alt="Kursy">
-      <div class="overlay"></div>
-      <div class="carousel-caption justify-content-between">
-        <h2>Kursy</h2>
-      </div>
-  </section>
+<section id="kursy" class="single-carousel" data-bg="dark">
+  <img src="https://picsum.photos/id/1003/1600/600" class="img-fluid" alt="Kursy">
+  <div class="overlay"></div>
+  <div class="carousel-caption">
+    <h2>Kursy</h2>
+  </div>
+</section>
+
   
         <!-- Stopka -->
         <footer class="footerView text-center bg-dark text-white py-4">
@@ -246,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
         navbar.classList.remove("navbar-scrolled");
         hamburger.classList.add("hamburger-white");
         hamburger.classList.remove("hamburger-black");
-        logo.src = "/workspaces/Ira/logo/Logo_OG_white.png"; // białe
+        logo.src = "./logo/Logo_OG_white.png"; // białe
       }
     }
   }
@@ -262,13 +263,13 @@ document.addEventListener("DOMContentLoaded", function () {
             navbar.classList.add("navbar-scrolled");
             hamburger.classList.remove("hamburger-white");
             hamburger.classList.add("hamburger-black");
-            logo.src = "/workspaces/Ira/logo/Logo_OG.png"; // czarne
+            logo.src = "./logo/Logo_OG.png"; // czarne
           } else {
             navbar.classList.add("navbar-transparent");
             navbar.classList.remove("navbar-scrolled");
             hamburger.classList.add("hamburger-white");
             hamburger.classList.remove("hamburger-black");
-            logo.src = "/workspaces/Ira/logo/Logo_OG_white.png"; // białe
+            logo.src = "./logo/Logo_OG_white.png"; // białe
           }
         }
       });
@@ -284,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-
+<!-- workspaces/Ira -->
 
 
 </body>
