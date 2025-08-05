@@ -30,6 +30,45 @@ body {
 html {
   scroll-behavior: smooth;
 }
+@media (min-width: 768px) {
+    .section {
+    display: flex;
+    align-items: stretch;
+    }
+
+    .section > .col-md-6,
+    .section > .col-md-5 {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .section img.img-view {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    }
+
+    .section .col-md-5 {
+    justify-content: space-between; 
+    }
+}
+
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    position: static;
+    transform: none;
+    margin-left: 5%;
+    margin-right: auto;
+  }
+}
+
 
 /* Czy to jeszcze potrzebne? */
 .section-title {
@@ -162,7 +201,7 @@ section, .section-offer {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .logo {
     max-height: 25px;
   }
@@ -349,7 +388,7 @@ section, .section-offer {
 
 
 /* ========== RESPONSYWNOŚĆ: MOBILE (max-width: 576px) ========== */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 
   /* SEKCJA O MNIE */
   .section {
