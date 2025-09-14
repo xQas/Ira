@@ -9,6 +9,11 @@
 }
 
 /* ========== OGÓLNE ========== */
+* {
+  font-family: "Cactus Classical Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
   font-family: var(--font-main);
@@ -54,6 +59,12 @@ html {
     .section .col-md-5 {
     justify-content: space-between; 
     }
+}
+
+.cactus-classical-serif-regular {
+  font-family: "Cactus Classical Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .logo-container {
