@@ -191,7 +191,7 @@
         <!-- Dry-brush -->
         <section class="section-offer portfolio-section mt-5" data-bg="light">
             <h3 class="text-center mb-4">Dry-brush</h3>
-            <div class="row">
+            <div class="row d-none d-md-flex">
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="./pictures/glasses.JPG" class="card-img-top img-fluid" alt="Dry-brush 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/glasses.JPG', 'Boy in glasses')">
@@ -219,6 +219,50 @@
                         </div>  
                     </div>
                 </div>
+            </div>
+            <!-- Karuzela dla mobile -->
+            <div id="carouselNaSprzedaz" class="carousel slide d-md-none" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card mx-auto" style="max-width: 90%;">
+                            <img src="./pictures/glasses.JPG" class="card-img-top img-fluid" alt="Na sprzedaż 1"
+                                data-bs-toggle="modal" data-bs-target="#imageModal"
+                                onclick="openModal('./pictures/glasses.JPG', 'Obraz 1 - 1500 PLN')">
+                            <div class="card-body">
+                                <h5 class="card-title">Young Boy</h5>
+                                <p class="card-text">suchy pędzel na papierze</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card mx-auto" style="max-width: 90%;">
+                            <img src="./pictures/boy.JPG" class="card-img-top img-fluid" alt="Na sprzedaż 2"
+                                data-bs-toggle="modal" data-bs-target="#imageModal"
+                                onclick="openModal('./pictures/boy.JPG', 'Obraz 2 - 2000 PLN')">
+                            <div class="card-body">
+                                <h5 class="card-title">Nice summer hat</h5>
+                                <p class="card-text">Dry-brush on paper</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card mx-auto" style="max-width: 90%;">
+                            <img src="./pictures/woman.JPG" class="card-img-top img-fluid" alt="Na sprzedaż 3"
+                                data-bs-toggle="modal" data-bs-target="#imageModal"
+                                onclick="openModal('./pictures/woman.JPG', 'Obraz 3 - 1200 PLN')">
+                            <div class="card-body">
+                                <h5 class="card-title">Kobieta / Woman</h5>
+                                <p class="card-text">suchy pędzel / dry brush</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselNaSprzedaz" data-bs-slide="prev" style="width: 1%;">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselNaSprzedaz" data-bs-slide="next" style="width: 1%;">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </section>
 
