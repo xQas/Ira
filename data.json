@@ -1,0 +1,34 @@
+{
+  "site": {
+    "title": "Iryna Lozhechnikova - Portfolio",
+    "logo": {
+      "light": "./logo/Logo_OG_white.png",
+      "dark": "./logo/Logo_OG.png"
+    }
+  },
+  
+  "paintings": [
+    {
+      "id": 1,
+      "title": "Golden earring",
+      "category": "for_sale",
+      "dimensions": "50x70 cm",
+      "price": "15 000 PLN",
+      "image_url": "./pictures/gold.JPG"
+    },
+    {
+      "id": 2,
+      "title": "Chłopiec w okularach",
+      "category": "dry_brush",
+      "description": "Suchy pędzel na papierze",
+      "image_url": "./pictures/glasses.JPG"
+    },
+    {
+      "id": 3,
+      "title": "Wet-brush 1",
+      "category": "wet_brush",
+      "dimensions": "60x90 cm",
+      "image_url": "https://picsum.photos/id/206/800/1200"
+    }
+  ]
+}
