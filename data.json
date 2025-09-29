@@ -1,0 +1,96 @@
+{
+  "site": {
+    "title": "Iryna Romanów",
+    "logo": {
+      "light": "./logo/Logo_OG_white.png",
+      "dark": "./logo/Logo_OG.png"
+    }
+  },
+  "paintings": [
+    {
+      "id": 1,
+      "title": "Golden earring",
+      "category": "oferta",
+      "dimensions": "50x70 cm",
+      "price": "15 000 PLN",
+      "image_url": "/workspaces/Ira/pictures/gold.JPG"
+    },
+    {
+      "id": 2,
+      "title": "Chłopiec w okularach",
+      "category": "dry_brush",
+      "description": "Suchy pędzel na papierze",
+      "image_url": "/workspaces/Ira/pictures/glasses.JPG"
+    },
+    {
+      "id": 3,
+      "title": "Dziecię",
+      "category": "oferta",
+      "dimensions": "rozmiar",
+      "image_url": "/workspaces/Ira/pictures/child.JPG"
+    },
+    {
+      "id": 4,
+      "title": "Portret wet-brush",
+      "category": "oferta",
+      "dimensions": "rozmiar",
+      "image_url": "/workspaces/Ira/pictures/hat.JPG"
+    },
+    {
+      "id": 5,
+      "title": "karuzelaGOLD",
+      "category": "karuzela",
+      "dimensions": "rozmiar",
+      "image_url": "/workspaces/Ira/pictures/karuzelaGOLD.JPG"
+    },
+    {
+      "id": 6,
+      "title": "karuzelaCHILD",
+      "category": "karuzela",
+      "dimensions": "rozmiar",
+      "image_url": "/workspaces/Ira/pictures/karuzelaCHILD.JPG"
+    },
+    {
+      "id": 7,
+      "title": "karuzelaWOMAN",
+      "category": "karuzela",
+      "dimensions": "rozmiar",
+      "image_url": "/workspaces/Ira/pictures/karuzelaWOMAN.JPG"
+    },
+    {
+      "id": 8,
+      "title": "Young Boy",
+      "category": "dry_brush",
+      "description": "Dry-brush on paper",
+      "image_url": "/workspaces/Ira/pictures/glasses.JPG"
+    },
+    {
+      "id": 9,
+      "title": "Kobieta / Woman",
+      "category": "dry_brush",
+      "description": "suchy pędzel / dry brush",
+      "image_url": "/workspaces/Ira/pictures/woman.JPG"
+    },
+    {
+      "id": 10,
+      "title": "Złoty kolczyk",
+      "category": "Obrazy",
+      "dimensions": "Wymiary: 60x90 cm",
+      "image_url": "/workspaces/Ira/pictures/gold.JPG"
+    },
+    {
+      "id": 11,
+      "title": "Złoty kolczyk / Golden earring",
+      "category": "Obrazy",
+      "dimensions": "Wymiary: 60x90 cm",
+      "image_url": "/workspaces/Ira/pictures/gold2.JPG"
+    },
+    {
+      "id": 12,
+      "title": "Golden earring",
+      "category": "Obrazy",
+      "dimensions": "Wymiary: 60x90 cm",
+      "image_url": "/workspaces/Ira/pictures/gold3.JPG"
+    }
+  ]
+}
