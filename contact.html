@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iryna Romanów - kontakt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+</head>
+
+<body>
+    <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+    </script>
+
+<div class="scroll-container">
+<!-- Nawigacja -->
+<nav class="navbar navbar-expand-lg navbar-transparent fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Napis "Iryna Romanów" ukryty na małych ekranach -->
+        <div class="d-flex align-items-center">
+            <a class="navbar-brand d-none d-md-block" href="index.html">Iryna Romanów</a>
+        </div>
+          
+        <div class="logo-container d-flex align-items-center">
+            <a href="index.html">
+                <img src="./logo/Logo_OG_white.png" alt="Logo" class="img-fluid logo">
+            </a>
+        </div>
+
+        <!-- Tradycyjne menu nawigacyjne - widoczne na dużych ekranach (d-lg-flex) -->
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="aboutme.html">O mnie</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Oferta</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+            </ul>
+        </div>
+
+        <!-- Przycisk offcanvas widoczny tylko na małych ekranach (d-lg-none) -->
+    <button id="hamburger" class="hamburger hamburger-white hamburger--spin d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    </div>
+</nav>
+
+
+<!-- Menu offcanvas - widoczne tylko na małych ekranach -->
+<div class="offcanvas offcanvas-top custom-offcanvas" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="height: 100vh;">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel">Iryna Romanów</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body justify-content-center">
+        <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="aboutme.html">O mnie</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Oferta</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+<!-- Sekcja O mnie -->
+<section class="section d-flex row" data-bg="light"> 
+    <!-- ZDJĘCIE -->
+    <div class="img-col col-md-6 d-flex align-items-start justify-content-center justify-content-md-start">
+        <img src="https://picsum.photos/id/65/1200/900" class="img-view img-fluid rounded" alt="Jan Kowalski" loading="lazy">
+    </div>
+    <!-- TEKST -->            
+    <div class="text-col col-md-5 d-flex flex-column justify-content-between">
+        <div class="mx-3">
+            <h2 class="pb-1">Kontakt</h2>
+            <p>Skorzystaj z poniższego formularza aby wysłać mi wiadomość!</p>
+            <p>tel. +48 787 961 811 </p>
+            <p>mail. ir.romanow@gmail.com</p>
+        </div>
+        <!-- PRZYCISK "WIĘCEJ" -->
+        <div class="d-flex align-items-end justify-content-center justify-content-md-end">
+            <button type="button" class="btn btn-dark">Wyślij</button>  
+        </div>
+    </div>
+</section>
+  
+
+<!-- Sekcja Nie masz pomysłu na prezent -->
+<section class="section d-flex flex-row-reverse row" data-bg="light">
+    <div class="img-col col-md-6 d-flex align-items-start justify-content-center">
+        <img src="https://picsum.photos/id/74/1200/900" class="img-fluid rounded img-view" alt="Jan Kowalski" loading="lazy">
+    </div>
+
+    <div class="text-col col-md-5 d-flex flex-column justify-content-between">
+        <div class="mx-3">
+            <h2 class="pb-1">Wykształcenie / wystawy</h2>
+            <p>Tutaj informacje o szkołach, szkoleniach, kursach itp.</p>
+            <p>Wystawy</p>
+            <ul>
+                <li>Londyn 2026 - Best artists world</li>
+                <li>Opole 2027 - BONK gallery universary</li>
+                <li>etc.</li>
+            </ul>
+        </div>
+
+        <div class="d-flex align-items-end justify-content-center justify-content-md-start">
+            <button type="button" class="btn btn-dark">Najbliższa wystawa</button>
+        </div>
+    </div>
+</section>
+
+<!-- Sekcja Oferta -->
+<section class="section-offer text-center" data-bg="light">
+    <h2>Oferta</h2>
+    <div class="row">
+    
+        <div class="col-md-4 portfolio-item">
+            <div class="card">
+                <img src="./pictures/hat.JPG" class="card-img-top" alt="Project 1">
+                <div class="overlay"></div>
+                <div class="card-img-overlay d-flex flex-column justify-content-between">
+                    <h5 class="card-title text-white text-center mt-auto mb-auto">Portret wet-brush</h5>
+                    <div class="text-center mb-2">
+                        <button class="btn btn-outline-light">Zamów</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="col-md-4 portfolio-item">
+            <div class="card">
+                <img src="./pictures/gold.JPG" class="card-img-top" alt="Project 1">
+                <div class="overlay"></div>
+
+                <div class="card-img-overlay d-flex flex-column justify-content-between">
+                    <h5 class="card-title text-white text-center mt-auto mb-auto">Portret wet-brush</h5>
+                    <div class="text-center mb-2">
+                        <button class="btn btn-outline-light">Zamów</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4 portfolio-item">
+            <div class="card">
+                <img src="./pictures/child.JPG" class="card-img-top" alt="Project 1">
+                <div class="overlay"></div>
+                <div class="card-img-overlay d-flex flex-column justify-content-between">
+                    <h5 class="card-title text-white text-center mt-auto mb-auto">Obraz ze zdjęcia</h5>
+                    <div class="text-center mb-2">
+                        <button class="btn btn-outline-light">Zamów</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    </div>
+</section>
+    
+<!-- Sekcja Kursy -->
+<section id="kursy" class="single-carousel" data-bg="dark">
+  <img src="https://picsum.photos/id/1003/1600/600" class="img-fluid" alt="Kursy">
+  <div class="overlay"></div>
+  <div class="carousel-caption">
+    <h2>Kursy</h2>
+  </div>
+</section>
+
+  
+        <!-- Stopka -->
+        <footer class="footerView text-center bg-dark text-white py-4">
+            <p>&copy; 2025 Iryna Romanów. Wszelkie prawa zastrzeżone.</p>
+            <div>
+                <a href="#" class="text-white mx-2">Facebook</a>
+                <a href="#" class="text-white mx-2">LinkedIn</a>
+                <a href="#" class="text-white mx-2">Instagram</a>
+            </div>
+        </footer>
+
+        <!-- Bootstrap 5 JS and CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar");
+  const logo = document.querySelector(".logo");
+  const hamburger = document.querySelector(".hamburger");
+
+  const sections = document.querySelectorAll("section");
+
+  function updateNavbarOnResize() {
+    let currentSection = null;
+
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        currentSection = section;
+      }
+    });
+
+    if (currentSection) {
+      const bg = currentSection.dataset.bg;
+
+      if (bg === "light" && window.innerWidth > 768) {
+        navbar.classList.remove("navbar-transparent");
+        navbar.classList.add("navbar-scrolled");
+        hamburger.classList.remove("hamburger-white");
+        hamburger.classList.add("hamburger-black");
+        logo.src = "./logo/Logo_OG.png"; // czarne
+      } else {
+        navbar.classList.add("navbar-transparent");
+        navbar.classList.remove("navbar-scrolled");
+        hamburger.classList.add("hamburger-white");
+        hamburger.classList.remove("hamburger-black");
+        logo.src = "./logo/Logo_OG_white.png"; // białe
+      }
+    }
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const bg = entry.target.dataset.bg;
+
+          if (bg === "light" && window.innerWidth > 768) {
+            navbar.classList.remove("navbar-transparent");
+            navbar.classList.add("navbar-scrolled");
+            hamburger.classList.remove("hamburger-white");
+            hamburger.classList.add("hamburger-black");
+            logo.src = "./logo/Logo_OG.png"; // czarne
+          } else {
+            navbar.classList.add("navbar-transparent");
+            navbar.classList.remove("navbar-scrolled");
+            hamburger.classList.add("hamburger-white");
+            hamburger.classList.remove("hamburger-black");
+            logo.src = "./logo/Logo_OG_white.png"; // białe
+          }
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  // Obsługa resize
+  window.addEventListener("resize", function () {
+    updateNavbarOnResize();
+  });
+});
+</script>
+<!-- /workspaces/Ira -->
+
+
+</body>
+</html>
