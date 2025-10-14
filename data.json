@@ -91,6 +91,27 @@
       "category": "Obrazy",
       "dimensions": "Wymiary: 60x90 cm",
       "image_url": "/workspaces/Ira/pictures/gold3.JPG"
+    },
+    {
+      "id": 13,
+      "title": "Girl and sea",
+      "category": "Obrazy",
+      "dimensions": "Wymiary: 0x0 cm",
+      "image_url": "/workspaces/Ira/pictures/Girl_sea.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Detail hair",
+      "category": "Obrazy",
+      "dimensions": "Wymiary: 60x90 cm",
+      "image_url": "/workspaces/Ira/pictures/Detail_hair.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Detail hand",
+      "category": "Obrazy",
+      "dimensions": "Wymiary: 60x90 cm",
+      "image_url": "/workspaces/Ira/pictures/Detail_hand.jpg"
     }
   ]
 }
