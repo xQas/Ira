@@ -138,6 +138,23 @@ html {
     }
 }
 
+/* Page-specific navbar styling for contact page: transparent navbar with black text/hamburger */
+.page-contact .navbar {
+  background-color: transparent !important;
+  color: var(--color-dark) !important;
+}
+
+.page-contact .navbar .nav-link,
+.page-contact .navbar .navbar-brand {
+  color: var(--color-dark) !important;
+}
+
+.page-contact .hamburger .hamburger-inner,
+.page-contact .hamburger .hamburger-inner::before,
+.page-contact .hamburger .hamburger-inner::after {
+  background-color: var(--color-dark) !important;
+}
+
 .cactus-classical-serif-regular {
   font-family: "Cactus Classical Serif", serif;
   font-weight: 400;
@@ -586,15 +603,19 @@ html {
       height: 50vh;
   }
 
-    /* Small screens: stack columns vertically, keep form usable and fit in viewport */
+    /* Small screens: stack columns vertically, keep left column visible and form usable */
     #kontakt {
       padding-top: 0 !important;
       height: auto;
     }
 
+    /* Left column (contact details) stays visible above the form on small screens */
     #kontakt .img-col {
+      display: block !important;
       width: 100%;
       padding: 1rem;
+      height: auto !important;
+      visibility: visible !important;
     }
 
     #kontakt .text-col {
@@ -608,19 +629,7 @@ html {
       height: auto;
     }
 
-    /* On small screens hide the image column and make the text column full viewport height */
-    #kontakt .img-col {
-      display: none !important;
-      height: 0 !important;
-      visibility: hidden;
-    }
-
-    #kontakt .text-col {
-      height: 100vh !important;
-      padding-top: calc(var(--navbar-height) + 1rem);
-      box-sizing: border-box;
-      overflow-y: auto;
-    }
+    /* Navbar styling left to global/default rules; no forced color on small screens */
 
   .section .col-md-auto {
     padding: 0 !important;
@@ -734,7 +743,7 @@ html {
     display: block;
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 20vh); /* preserves existing 20vh top/bottom spacing */
+    max-height: calc(100vh - 25vh); /* preserves existing 20vh top/bottom spacing */
     object-fit: cover;
   }
 }
