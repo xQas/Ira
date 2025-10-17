@@ -75,45 +75,49 @@
 
 <!-- SEKCJA KONTAKT -->
 <section class="section d-flex row" data-bg="light" id="kontakt">
-  <!-- ZDJĘCIE -->
-  <div class="img-col col-md-6 d-flex align-items-start justify-content-center justify-content-md-start">
-      <img src="https://picsum.photos/id/65/1200/900" class="img-view img-fluid rounded" alt="Iryna Romanów" loading="lazy">
-  </div>
-
-  <!-- FORMULARZ KONTAKTOWY -->
-  <div class="text-col col-md-5 d-flex flex-column justify-content-between">
-      <div class="mx-3">
+  <!-- LEWA KOLUMNA: DANE KONTAKTOWE (zajmuje miejsce zdjęcia) -->
+  <div class="img-col col-md-6 d-flex flex-column justify-content-start align-items-start">
+      <div class="mx-3 mt-2">
           <h2 class="pb-1">Kontakt</h2>
-          <p>Masz pytanie, chcesz zamówić obraz lub zapytać o współpracę? Skorzystaj z poniższego formularza.</p>
-          
-          <form id="contact-form" action="#" method="post" class="contact-form mt-4">
-              <div class="mb-3">
-                  <label for="name" class="form-label">Imię i nazwisko</label>
-                  <input type="text" id="name" name="name" class="form-control" required>
-              </div>
+          <p>Masz pytanie, chcesz zamówić obraz lub zapytać o współpracę? Skorzystaj z poniższego formularza po prawej stronie lub skontaktuj się bezpośrednio:</p>
 
-              <div class="mb-3">
-                  <label for="email" class="form-label">Adres e-mail</label>
-                  <input type="email" id="email" name="email" class="form-control" required>
-              </div>
-
-              <div class="mb-3">
-                  <label for="subject" class="form-label">Temat</label>
-                  <input type="text" id="subject" name="subject" class="form-control">
-              </div>
-
-              <div class="mb-3">
-                  <label for="message" class="form-label">Wiadomość</label>
-                  <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-dark w-100">Wyślij wiadomość</button>
-          </form>
-
-          <div class="mt-4">
+          <div class="mt-4 contact-details">
               <p class="mb-1">tel. <a href="tel:+48787961811" class="text-dark text-decoration-none">+48 787 961 811</a></p>
               <p>mail. <a href="mailto:ir.romanow@gmail.com" class="text-dark text-decoration-none">ir.romanow@gmail.com</a></p>
           </div>
+      </div>
+  </div>
+
+  <!-- PRAWA KOLUMNA: FORMULARZ KONTAKTOWY -->
+  <div class="text-col col-md-6 d-flex flex-column justify-content-center">
+      <div class="mx-3 w-100">
+          <form id="contact-form" action="#" method="post" class="contact-form h-100">
+              <div class="form-body">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Imię i nazwisko</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Adres e-mail</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Temat</label>
+                    <input type="text" id="subject" name="subject" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Wiadomość</label>
+                    <textarea id="message" name="message" class="form-control" required></textarea>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-dark w-100">Wyślij wiadomość</button>
+              </div>
+          </form>
       </div>
   </div>
 </section>

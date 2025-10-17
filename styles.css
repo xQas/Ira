@@ -59,6 +59,83 @@ html {
     .section .col-md-5 {
     justify-content: space-between; 
     }
+
+    /* For contact section: ensure image and text columns split the 100vh (minus optional top padding) */
+    #kontakt {
+      height: calc(100vh); /* full viewport */
+      padding-top: 15vh; /* keep visual top spacing on large screens */
+      box-sizing: border-box;
+    }
+
+    /* Two-column layout: left = contact details, right = form. Both equal height. */
+    #kontakt {
+      height: 100vh;
+      padding-top: 15vh;
+      box-sizing: border-box;
+    }
+
+    #kontakt .img-col,
+    #kontakt .text-col {
+      height: calc(100vh - 15vh);
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 2rem;
+    }
+
+    /* Force two-column 50/50 layout for the contact section (more specific to beat Bootstrap overrides) */
+    #kontakt {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      align-items: stretch !important;
+    }
+
+    #kontakt > .img-col,
+    #kontakt > .text-col {
+      flex: 0 0 50% !important;
+      max-width: 50% !important;
+      width: 50% !important;
+    }
+
+    /* Make sure left column (contact details) aligns content to top-left */
+    #kontakt .img-col {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    /* Right column: form should fill available height and not introduce vertical scrolling */
+    #kontakt .text-col {
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    /* Form structure: body takes available space, actions stay visible */
+    #kontakt .contact-form {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+    }
+
+    #kontakt .contact-form .form-body {
+      overflow: hidden; /* avoid internal scrollbar; make fields smaller instead */
+      flex: 1 1 auto;
+      padding-right: 0.25rem;
+    }
+
+    #kontakt .contact-form .form-actions {
+      flex: 0 0 auto;
+      margin-top: 1rem;
+    }
+
+    /* Ensure the form itself doesn't overflow the column; make it scrollable if content grows */
+    #kontakt .text-col .mx-3 {
+      max-height: 100%;
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
 }
 
 .cactus-classical-serif-regular {
@@ -435,8 +512,8 @@ html {
 .contact-form .form-control {
   border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 0.8rem 1rem;
-  font-size: 1vw;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9vw;
   transition: all 0.2s ease-in-out;
 }
 
@@ -447,6 +524,8 @@ html {
 
 .contact-form textarea {
   resize: none;
+  max-height: 35vh;
+  min-height: 8vh;
 }
 
 .contact-form .btn {
@@ -504,8 +583,44 @@ html {
     display: flex;
     object-fit: cover;
     padding: 5%;
-    height: 50vh;
+      height: 50vh;
   }
+
+    /* Small screens: stack columns vertically, keep form usable and fit in viewport */
+    #kontakt {
+      padding-top: 0 !important;
+      height: auto;
+    }
+
+    #kontakt .img-col {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    #kontakt .text-col {
+      width: 100%;
+      padding: 1rem;
+      height: auto;
+    }
+
+    /* Ensure the form doesn't create a double-scroll — let the page scroll normally */
+    #kontakt .contact-form {
+      height: auto;
+    }
+
+    /* On small screens hide the image column and make the text column full viewport height */
+    #kontakt .img-col {
+      display: none !important;
+      height: 0 !important;
+      visibility: hidden;
+    }
+
+    #kontakt .text-col {
+      height: 100vh !important;
+      padding-top: calc(var(--navbar-height) + 1rem);
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
 
   .section .col-md-auto {
     padding: 0 !important;
@@ -603,6 +718,36 @@ html {
   .portfolio-item .card-title,
   .portfolio-item .btn {
     z-index: 3;
+  }
+}
+
+/* Desktop tweaks for contact form: tighten spacing and enlarge message box */
+@media (min-width: 768px) {
+  #kontakt .contact-form .mb-3 {
+    margin-bottom: 0.35rem; /* tighter spacing between fields */
+  }
+
+  #kontakt .contact-form .form-label {
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+  }
+
+  #kontakt .contact-form .form-control {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    font-size: 0.85vw;
+  }
+
+  #kontakt .contact-form textarea.form-control {
+    min-height: 14vh; /* increase to gain an extra line */
+    max-height: 28vh;
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+  }
+
+  /* Remove any inner scrollbar fallback to keep layout stable */
+  #kontakt .contact-form .form-body {
+    overflow: hidden;
   }
 }
 
