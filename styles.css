@@ -421,6 +421,57 @@ html {
   }
 }
 
+/* ========== FORMULARZ KONTAKTOWY ========== */
+.contact-form {
+  font-family: var(--font-main);
+}
+
+.contact-form .form-label {
+  font-size: 1.2vw;
+  color: var(--color-dark);
+  margin-bottom: 0.3rem;
+}
+
+.contact-form .form-control {
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.8rem 1rem;
+  font-size: 1vw;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 0.1rem rgba(230, 57, 70, 0.3);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form .btn {
+  font-size: 1vw;
+  padding: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .contact-form .form-label {
+    font-size: 3vw;
+  }
+
+  .contact-form .form-control,
+  .contact-form .btn {
+    font-size: 3vw;
+  }
+}
+
 
 /* ========== RESPONSYWNOŚĆ: MOBILE (max-width: 576px) ========== */
 @media (max-width: 768px) {
