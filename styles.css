@@ -721,6 +721,24 @@ html {
   }
 }
 
+/* Ensure side-column images fit within the viewport on wide screens without changing section padding (20vh) */
+@media (min-width: 768px) {
+  /* hide overflow of image columns so scaled images won't push layout */
+  .section .img-col {
+    overflow: hidden;
+  }
+
+  /* constrain images in side columns to available viewport height (viewport minus 20vh section vertical padding) */
+  .section .img-col img.img-view,
+  .section img.img-view {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 20vh); /* preserves existing 20vh top/bottom spacing */
+    object-fit: cover;
+  }
+}
+
 /* Desktop tweaks for contact form: tighten spacing and enlarge message box */
 @media (min-width: 768px) {
   #kontakt .contact-form .mb-3 {
