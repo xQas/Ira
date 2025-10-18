@@ -175,6 +175,12 @@ html {
     margin-left: 5%;
     margin-right: auto;
   }
+
+  /* Adjust contact section on small screens: add top padding so content sits lower on the viewport */
+  #kontakt {
+    padding-top: 20vh !important;
+    box-sizing: border-box;
+  }
 }
 
 
@@ -605,8 +611,9 @@ html {
 
     /* Small screens: stack columns vertically, keep left column visible and form usable */
     #kontakt {
-      padding-top: 0 !important;
+      padding-top: 15vh !important; /* ensure top spacing on small screens overrides other section rules */
       height: auto;
+      box-sizing: border-box;
     }
 
     /* Left column (contact details) stays visible above the form on small screens */
