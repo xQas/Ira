@@ -107,7 +107,7 @@
             <h3 class="text-center mb-4">Na sprzedaż</h3>
 
             <!-- Single-row horizontally scrollable sale row. Visible card count is responsive. -->
-            <div class="sale-container">
+            <div class="sale-container" data-category="oferta">
                 <button class="sale-control-prev" aria-label="Poprzednie">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </button>
@@ -203,7 +203,7 @@
         <!-- Dry-brush -->
         <section class="section-offer portfolio-section mt-5" data-bg="light">
             <h3 class="text-center mb-4">Dry-brush</h3>
-            <div class="sale-container">
+            <div class="sale-container" data-category="dry_brush">
                 <button class="sale-control-prev" aria-label="Poprzednie">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </button>
@@ -234,7 +234,7 @@
         <!-- Wet-brush -->
         <section class="section-offer portfolio-section mt-5" data-bg="light">
             <h3 class="text-center mb-4">Wet-brush</h3>
-            <div class="sale-container">
+            <div class="sale-container" data-category="oferta">
                 <button class="sale-control-prev" aria-label="Poprzednie">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </button>
@@ -265,7 +265,7 @@
         <!-- Obrazy -->
         <section class="section-offer portfolio-section mt-5" data-bg="light">
             <h3 class="text-center mb-4">Obrazy</h3>
-            <div class="sale-container">
+            <div class="sale-container" data-category="Obrazy">
                 <button class="sale-control-prev" aria-label="Poprzednie">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </button>
@@ -464,7 +464,66 @@
             });
         </script>
         <script>
-            (function () {
+            (async function () {
+                // Fetch data.json and render sale cards by category
+                async function fetchData() {
+                    try {
+                        const res = await fetch('./data.json');
+                        if (!res.ok) throw new Error('fetch failed');
+                        return res.json();
+                    } catch (e) {
+                        console.warn('Could not load data.json:', e);
+                        return null;
+                    }
+                }
+
+                function toLocalImagePath(url) {
+                    if (!url) return '';
+                    // if it's already a local relative path, return as-is
+                    if (url.startsWith('./') || url.startsWith('../') || url.startsWith('pictures/') || url.startsWith('./pictures/')) return url;
+                    // extract filename and map to ./pictures/
+                    const parts = url.split('/');
+                    const file = parts[parts.length - 1];
+                    return './pictures/' + file;
+                }
+
+                const data = await fetchData();
+                const paintings = (data && data.paintings) ? data.paintings : [];
+
+                // Render function for a given container and array of painting items
+                function renderCardsFor(container, items) {
+                    const row = container.querySelector('.sale-row');
+                    if (!row) return;
+                    row.innerHTML = '';
+                    items.forEach(p => {
+                        const img = toLocalImagePath(p.image_url || p.imageUrl || p.image || '');
+                        const title = p.title || '';
+                        const dims = p.dimensions ? `<p class="card-text">${p.dimensions}</p>` : '';
+                        const price = p.price ? `<p class="card-text">Cena: ${p.price}</p>` : '';
+                        const safeTitle = (title + '').replace(/'/g, "\\'");
+                        const div = document.createElement('div');
+                        div.className = 'sale-card card';
+                        div.innerHTML = `
+                            <img src="${img}" class="card-img-top img-fluid" alt="${title}" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('${img}','${safeTitle}')">
+                            <div class="card-body"><h5 class="card-title">${title}</h5>${dims}${price}</div>
+                        `;
+                        row.appendChild(div);
+                    });
+                }
+
+                // Populate each sale-container based on its data-category attribute
+                document.querySelectorAll('.sale-container').forEach(container => {
+                    const cat = container.dataset.category || '';
+                    const items = paintings.filter(p => (p.category || '').toLowerCase() === cat.toLowerCase());
+                    if (items.length > 0) {
+                        renderCardsFor(container, items);
+                    } else {
+                        // fallback: first 4 paintings
+                        renderCardsFor(container, paintings.slice(0, 4));
+                    }
+                });
+
+                // initialize per-container controls after rendering
                 function visibleCount() {
                     if (window.matchMedia('(min-width: 992px)').matches) return 4; // large
                     if (window.matchMedia('(min-width: 576px)').matches) return 2; // medium
@@ -506,12 +565,13 @@
                 }
 
                 document.querySelectorAll('.sale-container').forEach(initSaleContainer);
-            })();
 
-            function openModal(imageUrl, title) {
-                document.getElementById('modalImage').src = imageUrl;
-                document.getElementById('imageModalLabel').innerText = title;
-            }
+                // keep openModal function available
+                window.openModal = function(imageUrl, title) {
+                    document.getElementById('modalImage').src = imageUrl;
+                    document.getElementById('imageModalLabel').innerText = title;
+                };
+            })();
         </script>
 </body>
 </html>
