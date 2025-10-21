@@ -108,7 +108,7 @@
 
             <!-- Single-row horizontally scrollable sale row. Visible card count is responsive. -->
             <div class="sale-container">
-                <button class="sale-control-prev" aria-label="Poprzednie" id="salePrev">
+                <button class="sale-control-prev" aria-label="Poprzednie">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </button>
                 <div class="sale-row" aria-label="Na sprzedaż - poziomy przewijany wiersz">
@@ -153,89 +153,80 @@
                         <p class="card-text">Cena: 999 PLN</p>
                     </div>
                 </div>
+                <div class="sale-card card">
+                    <img src="./pictures/gold2.JPG" class="card-img-top img-fluid" alt="Golden earring 2" loading="lazy"
+                        data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold2.JPG', 'Obraz 5 - 5000 PLN')">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden earring 2</h5>
+                        <p class="card-text">Wymiary: 60x90 cm</p>
+                        <p class="card-text">Cena: 5 000 PLN</p>
+                    </div>
                 </div>
-                <button class="sale-control-next" aria-label="Następne" id="saleNext">
+
+                <div class="sale-card card">
+                    <img src="./pictures/gold3.JPG" class="card-img-top img-fluid" alt="Golden earring 3" loading="lazy"
+                        data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold3.JPG', 'Obraz 6 - 6000 PLN')">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden earring 3</h5>
+                        <p class="card-text">Wymiary: 60x90 cm</p>
+                        <p class="card-text">Cena: 6 000 PLN</p>
+                    </div>
+                </div>
+
+                <div class="sale-card card">
+                    <img src="./pictures/Detal_hair.jpg" class="card-img-top img-fluid" alt="Detail hair" loading="lazy"
+                        data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/Detal_hair.jpg', 'Obraz 7 - 700 PLN')">
+                    <div class="card-body">
+                        <h5 class="card-title">Detail hair</h5>
+                        <p class="card-text">Wymiary: 20x30 cm</p>
+                        <p class="card-text">Cena: 700 PLN</p>
+                    </div>
+                </div>
+
+                <div class="sale-card card">
+                    <img src="./pictures/Detal_hand.jpg" class="card-img-top img-fluid" alt="Detail hand" loading="lazy"
+                        data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/Detal_hand.jpg', 'Obraz 8 - 800 PLN')">
+                    <div class="card-body">
+                        <h5 class="card-title">Detail hand</h5>
+                        <p class="card-text">Wymiary: 20x30 cm</p>
+                        <p class="card-text">Cena: 800 PLN</p>
+                    </div>
+                </div>
+                </div>
+                <button class="sale-control-next" aria-label="Następne">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </button>
             </div>
-            <p class="small text-center mt-2">Użyj przycisków lub przesuń palcem, aby zobaczyć więcej.</p>
         </section>
 
 
         <!-- Dry-brush -->
         <section class="section-offer portfolio-section mt-5" data-bg="light">
             <h3 class="text-center mb-4">Dry-brush</h3>
-            <div class="row d-none d-md-flex">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="./pictures/glasses.JPG" class="card-img-top img-fluid" alt="Dry-brush 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/glasses.JPG', 'Boy in glasses')">
-                        <div class="card-body">
-                            <h5 class="card-title">Chłopiec w okularach</h5>
-                            <p class="card-text">suchy pędzel na papierze</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="./pictures/boy.JPG" class="card-img-top img-fluid" alt="Dry-brush 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/boy.JPG', 'Young Boy')">
-                        <div class="card-body">
-                            <h5 class="card-title">Young Boy</h5>
-                            <p class="card-text">Dry-brush on paper</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="./pictures/woman.JPG" class="card-img-top img-fluid" alt="Dry-brush 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/woman.JPG', 'Woman')">
-                        <div class="card-body">
-                            <h5 class="card-title">Kobieta / Woman</h5>
-                            <p class="card-text">suchy pędzel / dry brush</p>
-                        </div>  
-                    </div>
-                </div>
-            </div>
-            <!-- Karuzela dla mobile -->
-            <div id="carouselDryBrush" class="carousel slide d-md-none" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card mx-auto" style="max-width: 90%;">
-                            <img src="./pictures/glasses.JPG" class="card-img-top img-fluid" alt="Na sprzedaż 1"
-                                data-bs-toggle="modal" data-bs-target="#imageModal"
-                                onclick="openModal('./pictures/glasses.JPG', 'Obraz 1 - 1500 PLN')">
-                            <div class="card-body">
-                                <h5 class="card-title">Young Boy</h5>
-                                <p class="card-text">suchy pędzel na papierze</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card mx-auto" style="max-width: 90%;">
-                            <img src="./pictures/boy.JPG" class="card-img-top img-fluid" alt="Na sprzedaż 2"
-                                data-bs-toggle="modal" data-bs-target="#imageModal"
-                                onclick="openModal('./pictures/boy.JPG', 'Obraz 2 - 2000 PLN')">
-                            <div class="card-body">
-                                <h5 class="card-title">Nice summer hat</h5>
-                                <p class="card-text">Dry-brush on paper</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card mx-auto" style="max-width: 90%;">
-                            <img src="./pictures/woman.JPG" class="card-img-top img-fluid" alt="Na sprzedaż 3"
-                                data-bs-toggle="modal" data-bs-target="#imageModal"
-                                onclick="openModal('./pictures/woman.JPG', 'Obraz 3 - 1200 PLN')">
-                            <div class="card-body">
-                                <h5 class="card-title">Kobieta / Woman</h5>
-                                <p class="card-text">suchy pędzel / dry brush</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDryBrush" data-bs-slide="prev" style="width: 1%;">
-                    <span class="carousel-control-prev-icon"></span>
+            <div class="sale-container">
+                <button class="sale-control-prev" aria-label="Poprzednie">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselDryBrush" data-bs-slide="next" style="width: 1%;">
-                    <span class="carousel-control-next-icon"></span>
+                <div class="sale-row" aria-label="Dry-brush - poziomy przewijany wiersz">
+                    <div class="sale-card card">
+                        <img src="./pictures/glasses.JPG" class="card-img-top img-fluid" alt="Chłopiec w okularach" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/glasses.JPG', 'Chłopiec w okularach')">
+                        <div class="card-body"><h5 class="card-title">Chłopiec w okularach</h5><p class="card-text">suchy pędzel na papierze</p></div>
+                    </div>
+                    <div class="sale-card card">
+                        <img src="./pictures/boy.JPG" class="card-img-top img-fluid" alt="Young Boy" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/boy.JPG', 'Young Boy')">
+                        <div class="card-body"><h5 class="card-title">Young Boy</h5><p class="card-text">Dry-brush on paper</p></div>
+                    </div>
+                    <div class="sale-card card">
+                        <img src="./pictures/woman.JPG" class="card-img-top img-fluid" alt="Woman" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/woman.JPG', 'Woman')">
+                        <div class="card-body"><h5 class="card-title">Woman</h5><p class="card-text">suchy pędzel / dry brush</p></div>
+                    </div>
+                    <div class="sale-card card">
+                        <img src="./pictures/glasses.JPG" class="card-img-top img-fluid" alt="Chłopiec 2" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/glasses.JPG', 'Chłopiec 2')">
+                        <div class="card-body"><h5 class="card-title">Chłopiec 2</h5><p class="card-text">suchy pędzel</p></div>
+                    </div>
+                </div>
+                <button class="sale-control-next" aria-label="Następne">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </button>
             </div>
         </section>
@@ -243,68 +234,62 @@
         <!-- Wet-brush -->
         <section class="section-offer portfolio-section mt-5" data-bg="light">
             <h3 class="text-center mb-4">Wet-brush</h3>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="./pictures/gold.JPG" class="card-img-top img-fluid" alt="Wet-brush 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold.JPG', 'Wet-brush 1')">
-                        <div class="card-body">
-                            <h5 class="card-title">Wet-brush 1</h5>
-                            <p class="card-text">Wymiary: 60x90 cm</p>
-                        </div>
+            <div class="sale-container">
+                <button class="sale-control-prev" aria-label="Poprzednie">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <div class="sale-row" aria-label="Wet-brush - poziomy przewijany wiersz">
+                    <div class="sale-card card">
+                        <img src="./pictures/gold.JPG" class="card-img-top img-fluid" alt="Wet-brush 1" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold.JPG', 'Wet-brush 1')">
+                        <div class="card-body"><h5 class="card-title">Wet-brush 1</h5><p class="card-text">Wymiary: 60x90 cm</p></div>
+                    </div>
+                    <div class="sale-card card">
+                        <img src="./pictures/hat.JPG" class="card-img-top img-fluid" alt="Wet-brush 2" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/hat.JPG', 'Wet-brush 2')">
+                        <div class="card-body"><h5 class="card-title">Wet-brush 2</h5><p class="card-text">Wymiary: 60x90 cm</p></div>
+                    </div>
+                    <div class="sale-card card">
+                        <img src="./pictures/child.JPG" class="card-img-top img-fluid" alt="Wet-brush 3" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/child.JPG', 'Wet-brush 3')">
+                        <div class="card-body"><h5 class="card-title">Wet-brush 3</h5><p class="card-text">Wymiary: 60x90 cm</p></div>
+                    </div>
+                    <div class="sale-card card">
+                        <img src="./pictures/gold2.JPG" class="card-img-top img-fluid" alt="Wet-brush 4" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold2.JPG', 'Wet-brush 4')">
+                        <div class="card-body"><h5 class="card-title">Wet-brush 4</h5><p class="card-text">Wymiary: 60x90 cm</p></div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="./pictures/hat.JPG" class="card-img-top img-fluid" alt="Wet-brush 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/hat.JPG', 'Wet-brush 2')">
-                        <div class="card-body">
-                            <h5 class="card-title">Wet-brush 2</h5>
-                            <p class="card-text">Wymiary: 60x90 cm</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="./pictures/child.JPG" class="card-img-top img-fluid" alt="Wet-brush 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/child.JPG', 'Wet-brush 3')">
-                        <div class="card-body">
-                            <h5 class="card-title">Wet-brush 3</h5>
-                            <p class="card-text">Wymiary: 60x90 cm</p>
-                        </div>
-                    </div>
-                </div>
+                <button class="sale-control-next" aria-label="Następne">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
             </div>
         </section>
 
         <!-- Obrazy -->
         <section class="section-offer portfolio-section mt-5" data-bg="light">
             <h3 class="text-center mb-4">Obrazy</h3>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="./pictures/gold.JPG" class="card-img-top img-fluid" alt="Obraz 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold.JPG', 'Obraz 1')">
-                        <div class="card-body">
-                            <h5 class="card-title">Złoty kolczyk</h5>
-                            <p class="card-text">Wymiary: 60x90 cm</p>
-                        </div>
+            <div class="sale-container">
+                <button class="sale-control-prev" aria-label="Poprzednie">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <div class="sale-row" aria-label="Obrazy - poziomy przewijany wiersz">
+                    <div class="sale-card card">
+                        <img src="./pictures/gold.JPG" class="card-img-top img-fluid" alt="Złoty kolczyk" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold.JPG', 'Złoty kolczyk')">
+                        <div class="card-body"><h5 class="card-title">Złoty kolczyk</h5><p class="card-text">Wymiary: 60x90 cm</p></div>
+                    </div>
+                    <div class="sale-card card">
+                        <img src="./pictures/gold2.JPG" class="card-img-top img-fluid" alt="Złoty kolczyk 2" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold2.JPG', 'Złoty kolczyk 2')">
+                        <div class="card-body"><h5 class="card-title">Złoty kolczyk 2</h5><p class="card-text">Wymiary: 60x90 cm</p></div>
+                    </div>
+                    <div class="sale-card card">
+                        <img src="./pictures/gold3.JPG" class="card-img-top img-fluid" alt="Golden earring" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold3.JPG', 'Golden earring')">
+                        <div class="card-body"><h5 class="card-title">Golden earring</h5><p class="card-text">Wymiary: 60x90 cm</p></div>
+                    </div>
+                    <div class="sale-card card">
+                        <img src="./pictures/Girl_sea.jpg" class="card-img-top img-fluid" alt="Girl and sea" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/Girl_sea.jpg', 'Girl and sea')">
+                        <div class="card-body"><h5 class="card-title">Girl and sea</h5><p class="card-text">Wymiary: 50x50 cm</p></div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="./pictures/gold2.JPG" class="card-img-top img-fluid" alt="Obraz 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold2.JPG', 'Obraz 2')">
-                        <div class="card-body">
-                            <h5 class="card-title">Złoty kolczyk / Golden earring</h5>
-                            <p class="card-text">Wymiary: 60x90 cm</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="./pictures/gold3.JPG" class="card-img-top img-fluid" alt="Obraz 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./pictures/gold3.JPG', 'Obraz 3')">
-                        <div class="card-body">
-                            <h5 class="card-title">Golden earring</h5>
-                            <p class="card-text">Wymiary: 60x90 cm</p>
-                        </div>
-                    </div>
-                </div>
+                <button class="sale-control-next" aria-label="Następne">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
             </div>
         </section>
     </div>
@@ -480,46 +465,47 @@
         </script>
         <script>
             (function () {
-                const row = document.querySelector('.sale-row');
-                const prev = document.getElementById('salePrev');
-                const next = document.getElementById('saleNext');
-
-                if (!row || !prev || !next) return;
-
                 function visibleCount() {
                     if (window.matchMedia('(min-width: 992px)').matches) return 4; // large
                     if (window.matchMedia('(min-width: 576px)').matches) return 2; // medium
                     return 1; // small
                 }
 
-                function cardSize() {
-                    const card = row.querySelector('.sale-card');
-                    return card ? card.getBoundingClientRect().width : row.clientWidth;
+                function initSaleContainer(container) {
+                    const row = container.querySelector('.sale-row');
+                    const prev = container.querySelector('.sale-control-prev');
+                    const next = container.querySelector('.sale-control-next');
+                    if (!row) return;
+
+                    function cardSize() {
+                        const card = row.querySelector('.sale-card');
+                        return card ? card.getBoundingClientRect().width : row.clientWidth;
+                    }
+
+                    function page(amount) {
+                        const size = cardSize() * amount;
+                        row.scrollBy({ left: size, behavior: 'smooth' });
+                    }
+
+                    if (prev) prev.addEventListener('click', () => page(-visibleCount()));
+                    if (next) next.addEventListener('click', () => page(visibleCount()));
+
+                    if (prev) prev.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') page(-visibleCount()); });
+                    if (next) next.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') page(visibleCount()); });
+
+                    function updateButtons() {
+                        if (!prev || !next) return;
+                        const maxScroll = row.scrollWidth - row.clientWidth - 1;
+                        prev.disabled = row.scrollLeft <= 0;
+                        next.disabled = row.scrollLeft >= maxScroll;
+                    }
+
+                    row.addEventListener('scroll', updateButtons);
+                    window.addEventListener('resize', updateButtons);
+                    setTimeout(updateButtons, 200);
                 }
 
-                function page(amount) {
-                    const size = cardSize() * amount;
-                    row.scrollBy({ left: size, behavior: 'smooth' });
-                }
-
-                prev.addEventListener('click', () => page(-visibleCount()));
-                next.addEventListener('click', () => page(visibleCount()));
-
-                // Enable keyboard left/right when focused
-                prev.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') page(-visibleCount()); });
-                next.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') page(visibleCount()); });
-
-                // Update buttons disabled state based on scroll position
-                function updateButtons() {
-                    const maxScroll = row.scrollWidth - row.clientWidth - 1;
-                    prev.disabled = row.scrollLeft <= 0;
-                    next.disabled = row.scrollLeft >= maxScroll;
-                }
-
-                row.addEventListener('scroll', updateButtons);
-                window.addEventListener('resize', updateButtons);
-                // initial
-                setTimeout(updateButtons, 200);
+                document.querySelectorAll('.sale-container').forEach(initSaleContainer);
             })();
 
             function openModal(imageUrl, title) {

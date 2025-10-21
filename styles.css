@@ -568,6 +568,56 @@ html {
 /* Larger images on larger screens */
 .sale-row .card-img-top { max-height: 320px; }
 
+/* Hide the prev/next controls on small screens (use native swipe) */
+@media (max-width: 575.98px) {
+  .sale-control-prev,
+  .sale-control-next {
+    display: none;
+  }
+}
+
+/* Also hide controls on medium screens (<= 991.98px) */
+@media (max-width: 991.98px) {
+  .sale-control-prev,
+  .sale-control-next {
+    display: none;
+  }
+}
+
+/* On large screens place controls outside the image area so they don't overlap cards */
+@media (min-width: 992px) {
+  /* position controls slightly outside the visible area but keep original transparent look */
+  .sale-control-prev { left: -48px; }
+  .sale-control-next { right: -48px; }
+  .sale-control-prev, .sale-control-next {
+    width: 48px;
+    height: 48px;
+    background: transparent; /* revert to original transparent overlay */
+    border-radius: 0;
+    box-shadow: none;
+    transition: transform 0.12s ease;
+    transform: translateY(-50%); /* keep vertical centering via translate */
+  }
+  /* on hover preserve translateY so the button doesn't shift vertically */
+  .sale-control-prev:hover, .sale-control-next:hover { transform: translateY(-50%) scale(1.03); }
+}
+
+/* Override the default bootstrap carousel icon (white SVG). Use simple black chevrons for sale controls */
+.sale-control-prev .carousel-control-prev-icon,
+.sale-control-next .carousel-control-next-icon {
+  background-image: none !important;
+  width: 24px;
+  height: 24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 26px;
+  color: #000; /* black arrows */
+  line-height: 1;
+}
+.sale-control-prev .carousel-control-prev-icon::before { content: '\2039'; }
+.sale-control-next .carousel-control-next-icon::before { content: '\203A'; }
+
 /* ========== MODAL ========== */
 .modal-img {
   max-width: 100%;
