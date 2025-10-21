@@ -473,6 +473,68 @@ html {
     padding-right: 2%;
 }
 
+/* ========== HORIZONTAL SALE ROW ========== */
+.sale-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.sale-row .sale-card {
+  scroll-snap-align: start;
+  flex: 0 0 auto; /* do not shrink; width controlled by min-width */
+  width: auto;
+  min-width: 80%; /* mobile: show ~1 card */
+  max-width: 320px;
+}
+
+/* Desktop: show more cards by reducing min-width */
+@media (min-width: 576px) {
+  .sale-row .sale-card { min-width: 45%; max-width: 380px; }
+}
+@media (min-width: 992px) {
+  .sale-row .sale-card { min-width: 22%; max-width: 320px; }
+}
+
+/* Improve look of cards inside sale row */
+.sale-row .card { height: 100%; }
+.sale-row .card-img-top { max-height: 220px; object-fit: cover; }
+
+/* Hide native scrollbar but preserve scrolling (touch/trackpad) */
+.sale-row {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.sale-row::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+/* Carousel-like prev/next controls positioned over the sale row */
+.sale-container { position: relative; }
+.sale-control-prev,
+.sale-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: transparent;
+  border: none;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.sale-control-prev { left: 4px; }
+.sale-control-next { right: 4px; }
+.sale-control-prev[disabled], .sale-control-next[disabled] { opacity: 0.35; cursor: default; }
+
+/* Larger images on larger screens */
+.sale-row .card-img-top { max-height: 320px; }
+
 /* ========== MODAL ========== */
 .modal-img {
   max-width: 100%;

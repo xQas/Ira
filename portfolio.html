@@ -106,75 +106,59 @@
         <section class="section-offer portfolio-section" data-bg="light">
             <h3 class="text-center mb-4">Na sprzedaż</h3>
 
-            <div id="carouselNaSprzedaz" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-
-                <div class="carousel-item active">
-                    <div class="row">
-                    <div class="col-12 col-lg-3 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <img src="./pictures/gold.JPG" class="card-img-top img-fluid" alt="Golden earring"
-                            data-bs-toggle="modal" data-bs-target="#imageModal"
-                            onclick="openModal('./pictures/gold.JPG', 'Obraz 1 - 1500 PLN')">
-                        <div class="card-body">
-                            <h5 class="card-title">Golden earring</h5>
-                            <p class="card-text">Wymiary: 50x70 cm</p>
-                            <p class="card-text">Cena: 15 000 PLN</p>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-3 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <img src="./pictures/hat.JPG" class="card-img-top img-fluid" alt="Nice summer hat"
-                            data-bs-toggle="modal" data-bs-target="#imageModal"
-                            onclick="openModal('./pictures/hat.JPG', 'Obraz 2 - 2000 PLN')">
-                        <div class="card-body">
-                            <h5 class="card-title">Nice summer hat</h5>
-                            <p class="card-text">Wymiary: 60x90 cm</p>
-                            <p class="card-text">Cena: 20,99 PLN</p>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-3 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <img src="./pictures/child.JPG" class="card-img-top img-fluid" alt="Child"
-                            data-bs-toggle="modal" data-bs-target="#imageModal"
-                            onclick="openModal('./pictures/child.JPG', 'Obraz 3 - 1200 PLN')">
-                        <div class="card-body">
-                            <h5 class="card-title">Child</h5>
-                            <p class="card-text">Wymiary: 40x60 cm</p>
-                            <p class="card-text">Cena: za darmo</p>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-3 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <img src="./pictures/Girl_sea.jpg" class="card-img-top img-fluid" alt="Example">
-                        <div class="card-body">
-                            <h5 class="card-title">Example painting</h5>
-                            <p class="card-text">Wymiary: 50x50 cm</p>
-                            <p class="card-text">Cena: 999 PLN</p>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                
-                </div>
-
-                <!-- Kontrolki karuzeli -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselNaSprzedaz" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Previous</span>
+            <!-- Single-row horizontally scrollable sale row. Visible card count is responsive. -->
+            <div class="sale-container">
+                <button class="sale-control-prev" aria-label="Poprzednie" id="salePrev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselNaSprzedaz" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Next</span>
+                <div class="sale-row" aria-label="Na sprzedaż - poziomy przewijany wiersz">
+                <div class="sale-card card">
+                    <img src="./pictures/gold.JPG" class="card-img-top img-fluid" alt="Golden earring" loading="lazy"
+                        data-bs-toggle="modal" data-bs-target="#imageModal"
+                        onclick="openModal('./pictures/gold.JPG', 'Obraz 1 - 1500 PLN')">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden earring</h5>
+                        <p class="card-text">Wymiary: 50x70 cm</p>
+                        <p class="card-text">Cena: 15 000 PLN</p>
+                    </div>
+                </div>
+
+                <div class="sale-card card">
+                    <img src="./pictures/hat.JPG" class="card-img-top img-fluid" alt="Nice summer hat" loading="lazy"
+                        data-bs-toggle="modal" data-bs-target="#imageModal"
+                        onclick="openModal('./pictures/hat.JPG', 'Obraz 2 - 2000 PLN')">
+                    <div class="card-body">
+                        <h5 class="card-title">Nice summer hat</h5>
+                        <p class="card-text">Wymiary: 60x90 cm</p>
+                        <p class="card-text">Cena: 20,99 PLN</p>
+                    </div>
+                </div>
+
+                <div class="sale-card card">
+                    <img src="./pictures/child.JPG" class="card-img-top img-fluid" alt="Child" loading="lazy"
+                        data-bs-toggle="modal" data-bs-target="#imageModal"
+                        onclick="openModal('./pictures/child.JPG', 'Obraz 3 - 1200 PLN')">
+                    <div class="card-body">
+                        <h5 class="card-title">Child</h5>
+                        <p class="card-text">Wymiary: 40x60 cm</p>
+                        <p class="card-text">Cena: za darmo</p>
+                    </div>
+                </div>
+
+                <div class="sale-card card">
+                    <img src="./pictures/Girl_sea.jpg" class="card-img-top img-fluid" alt="Example" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">Example painting</h5>
+                        <p class="card-text">Wymiary: 50x50 cm</p>
+                        <p class="card-text">Cena: 999 PLN</p>
+                    </div>
+                </div>
+                </div>
+                <button class="sale-control-next" aria-label="Następne" id="saleNext">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </button>
             </div>
+            <p class="small text-center mt-2">Użyj przycisków lub przesuń palcem, aby zobaczyć więcej.</p>
         </section>
 
 
@@ -418,62 +402,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-        enableCarouselSwipe('#carouselNaSprzedaz');
         enableCarouselSwipe('#carouselDryBrush');
-        });
-
-
-        let startX = 0;
-        let endX = 0;
-        let isDragging = false;
-
-        // 📱 Obsługa dotyku (mobile)
-        carousel.addEventListener('touchstart', e => {
-            startX = e.touches[0].clientX;
-        });
-
-        carousel.addEventListener('touchmove', e => {
-            endX = e.touches[0].clientX;
-        });
-
-        carousel.addEventListener('touchend', () => {
-            const diff = startX - endX;
-            if (Math.abs(diff) > 50) {
-            if (diff > 0) {
-                bsCarousel.next();
-            } else {
-                bsCarousel.prev();
-            }
-            }
-        });
-
-        // 🖱️ Obsługa myszki (desktop)
-        carousel.addEventListener('mousedown', e => {
-            startX = e.clientX;
-            isDragging = true;
-        });
-
-        carousel.addEventListener('mousemove', e => {
-            if (!isDragging) return;
-            endX = e.clientX;
-        });
-
-        carousel.addEventListener('mouseup', e => {
-            if (!isDragging) return;
-            isDragging = false;
-            const diff = startX - endX;
-            if (Math.abs(diff) > 50) {
-            if (diff > 0) {
-                bsCarousel.next();
-            } else {
-                bsCarousel.prev();
-            }
-            }
-        });
-
-        carousel.addEventListener('mouseleave', () => {
-            isDragging = false;
-        });
         });
         </script>
 
@@ -550,6 +479,50 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
         <script>
+            // Sale row controls: page the horizontal row by visible items (1/2/4)
+            (function () {
+                const row = document.querySelector('.sale-row');
+                const prev = document.getElementById('salePrev');
+                const next = document.getElementById('saleNext');
+
+                if (!row || !prev || !next) return;
+
+                function visibleCount() {
+                    if (window.matchMedia('(min-width: 992px)').matches) return 4; // large
+                    if (window.matchMedia('(min-width: 576px)').matches) return 2; // medium
+                    return 1; // small
+                }
+
+                function cardSize() {
+                    const card = row.querySelector('.sale-card');
+                    return card ? card.getBoundingClientRect().width : row.clientWidth;
+                }
+
+                function page(amount) {
+                    const size = cardSize() * amount;
+                    row.scrollBy({ left: size, behavior: 'smooth' });
+                }
+
+                prev.addEventListener('click', () => page(-visibleCount()));
+                next.addEventListener('click', () => page(visibleCount()));
+
+                // Enable keyboard left/right when focused
+                prev.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') page(-visibleCount()); });
+                next.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') page(visibleCount()); });
+
+                // Update buttons disabled state based on scroll position
+                function updateButtons() {
+                    const maxScroll = row.scrollWidth - row.clientWidth - 1;
+                    prev.disabled = row.scrollLeft <= 0;
+                    next.disabled = row.scrollLeft >= maxScroll;
+                }
+
+                row.addEventListener('scroll', updateButtons);
+                window.addEventListener('resize', updateButtons);
+                // initial
+                setTimeout(updateButtons, 200);
+            })();
+
             // Funkcja do ustawiania obrazu i tytułu w modal
             function openModal(imageUrl, title) {
                 document.getElementById('modalImage').src = imageUrl;
