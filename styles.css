@@ -364,6 +364,39 @@ html {
   z-index: 1;
 }
 
+/* Make the top header carousel occupy the full viewport and avoid extra section padding */
+#header.section, .bg-carousel {
+  height: 100vh !important;
+  padding: 0 !important;
+}
+
+#header .carousel-item, .bg-carousel .carousel-item {
+  height: 100vh;
+}
+
+#header .carousel-item img, .bg-carousel .carousel-item img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Ensure the header is full-bleed even when inside centered containers
+   (handles cases where markup includes grid classes like `col` or container padding) */
+#header, .bg-carousel {
+  width: 100vw !important;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+}
+
+/* Make sure carousel images always span viewport width */
+.carousel-item img {
+  min-width: 100vw;
+}
+
 /* ========== KURSY ========== */
 #kursy {
   position: relative;
